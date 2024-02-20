@@ -6,4 +6,6 @@ class RouteName {
   static const String loginView = ('/login_view');
    static const String registerView = ('/register_vire');
     static const String forgetPassword = ('/forgetpassword');
+        static const String homeScreen= ('/home_screen');
+
 }

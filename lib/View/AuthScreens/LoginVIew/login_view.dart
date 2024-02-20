@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -9,7 +7,6 @@ import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../components/loading_manager.dart';
 import '../../../routes/routes_name.dart';
-import '../../../utils/utils.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -163,6 +160,7 @@ class _LoginViewState extends State<LoginView> {
                     RoundedButton(
                       title: 'Login',
                       onpress: () {
+                        Navigator.pushNamed(context, RouteName.homeScreen);
                         // _submitFormOnLogin();
                       },
                       bgColor: AppColor.simpleBgbuttonColor,
