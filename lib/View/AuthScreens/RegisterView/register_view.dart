@@ -1,4 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -166,6 +165,7 @@ class _RegisterViewState extends State<RegisterView> {
                     RoundedButton(
                       title: 'Register',
                       onpress: () {
+                        Navigator.pushNamed(context, RouteName.homeScreen);
                         // _submitFormOnRegister();
                       },
                       bgColor: AppColor.simpleBgbuttonColor,
