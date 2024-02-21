@@ -13,4 +13,5 @@ class RouteName {
   static const String addDrAtHome = ('/add_dr_at_home');
   static const String addLaboratory = ('/add_laboratory');
   static const String addRadiology = ('/add_radiology');
+  static const String hospitalHome = ('/hospital_home');
 }
