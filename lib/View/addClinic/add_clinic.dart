@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddHospital extends StatelessWidget {
-  const AddHospital({super.key});
+class AddClinic extends StatelessWidget {
+  const AddClinic({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class AddHospital extends StatelessWidget {
                 }),
                 const VerticalSpeacing(46.0),
                 Text(
-                  "Enter your hospital details",
+                  "Enter your clinic details",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -53,7 +53,7 @@ class AddHospital extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Hospital Name",
+                  "Clinic Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -68,11 +68,11 @@ class AddHospital extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.local_hospital_outlined,
-                  hintText: 'Enter your hospital name...',
+                  hintText: 'Enter your clinic name...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Hospital Address",
+                  "Clinic Address",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -87,11 +87,11 @@ class AddHospital extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your hospital address...',
+                  hintText: 'Enter your clinic address...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Hospital Catagory",
+                  "Clinic Catagory",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -106,7 +106,7 @@ class AddHospital extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your hospital catagory...',
+                  hintText: 'Enter your clinic catagory...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
@@ -129,7 +129,7 @@ class AddHospital extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "hospital date open and off",
+                  "clinic timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -144,7 +144,7 @@ class AddHospital extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter date of open and close...',
+                  hintText: 'Enter clinic timing...',
                 ),
                 const VerticalSpeacing(16.0),
                 Text(
