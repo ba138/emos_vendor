@@ -1,4 +1,5 @@
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
@@ -53,7 +54,9 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addHospital);
+                      },
                       child: Container(
                         height: 100.0,
                         width: 115.0,
