@@ -9,4 +9,5 @@ class RouteName {
   static const String homeScreen = ('/home_screen');
 
   static const String addHospital = ('/add_hospital');
+  static const String addClinic = ('/add_clinic');
 }
