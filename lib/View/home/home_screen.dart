@@ -77,7 +77,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addAmbulance);
+                      },
                       child: Container(
                         height: 100.0,
                         width: 115.0,
@@ -127,7 +129,9 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addDrAtHome);
+                      },
                       child: Container(
                         height: 100.0,
                         width: 115.0,
@@ -169,7 +173,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addLaboratory);
+                      },
                       child: Container(
                         height: 100.0,
                         width: 115.0,
@@ -195,21 +201,26 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 100.0,
-                      width: 115.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppColor.textFieldColor,
-                          width: 1.0,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addRadiology);
+                      },
+                      child: Container(
+                        height: 100.0,
+                        width: 115.0,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: AppColor.textFieldColor,
+                            width: 1.0,
+                          ),
                         ),
-                      ),
-                      child: const SizedBox(
-                        height: 60.0,
-                        width: 108.0,
-                        child: HomeFeatures(
-                          img: 'images/radiology.png',
-                          name: 'Radiology',
+                        child: const SizedBox(
+                          height: 60.0,
+                          width: 108.0,
+                          child: HomeFeatures(
+                            img: 'images/radiology.png',
+                            name: 'Radiology',
+                          ),
                         ),
                       ),
                     ),

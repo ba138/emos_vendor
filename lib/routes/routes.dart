@@ -2,7 +2,11 @@ import 'package:emos_vendor/View/AddHospital/Add_hospital.dart';
 import 'package:emos_vendor/View/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
 import 'package:emos_vendor/View/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos_vendor/View/AuthScreens/RegisterView/register_view.dart';
+import 'package:emos_vendor/View/addAmbulance/add_ambulance.dart';
 import 'package:emos_vendor/View/addClinic/add_clinic.dart';
+import 'package:emos_vendor/View/addDoctorAtHome/add_doctor_at_home.dart';
+import 'package:emos_vendor/View/addLaboratory/add_laboratory.dart';
+import 'package:emos_vendor/View/addRadiology/add_radiology.dart';
 import 'package:emos_vendor/View/home/home_screen.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +58,22 @@ class Routes {
       case RouteName.addClinic:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AddClinic(),
+        );
+      case RouteName.addAmbulance:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddAmbulance(),
+        );
+      case RouteName.addDrAtHome:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddDctorAtHome(),
+        );
+      case RouteName.addLaboratory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddLaboratory(),
+        );
+      case RouteName.addRadiology:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddRadiology(),
         );
       default:
         return MaterialPageRoute(

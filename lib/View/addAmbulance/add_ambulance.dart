@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddClinic extends StatelessWidget {
-  const AddClinic({super.key});
+class AddAmbulance extends StatelessWidget {
+  const AddAmbulance({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class AddClinic extends StatelessWidget {
                 }),
                 const VerticalSpeacing(46.0),
                 Text(
-                  "Enter your clinic details",
+                  "Enter your ambulance details",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -53,7 +53,7 @@ class AddClinic extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Clinic Name",
+                  "Ambulance Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -68,11 +68,11 @@ class AddClinic extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.local_hospital_outlined,
-                  hintText: 'Enter your clinic name...',
+                  hintText: 'Enter your ambulance name...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Clinic Address",
+                  "Ambulance Location",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -87,11 +87,11 @@ class AddClinic extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your clinic address...',
+                  hintText: 'Enter your ambulance location...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Clinic Catagory",
+                  "Ambulance Catagory",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -106,7 +106,7 @@ class AddClinic extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your clinic catagory...',
+                  hintText: 'Enter your ambulance catagory...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
@@ -129,7 +129,7 @@ class AddClinic extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "clinic timing",
+                  "Ambulance timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -144,11 +144,30 @@ class AddClinic extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter clinic timing...',
+                  hintText: 'Enter ambulance timing...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Per Kiolmeter Price",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const TextFieldCustom(
+                  // controller: emailController,
+                  enablePrefixIcon: false,
+                  maxLines: 1,
+                  icon: Icons.location_city_outlined,
+                  hintText: '200Pkr...',
                 ),
                 const VerticalSpeacing(16.0),
                 Text(
-                  "Clinic Images",
+                  "Ambulance Images",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
