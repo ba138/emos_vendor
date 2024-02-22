@@ -1,14 +1,16 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:emos_vendor/GlobalColors/colors.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../components/RoundedButton/rounded_button.dart';
 import '../../../components/VerticalSpacing/vertical_spacing.dart';
 import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../components/loading_manager.dart';
+import '../../../routes/routes_name.dart';
+import '../../../utils/utils.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});
@@ -18,48 +20,48 @@ class ForgetPasswordScreen extends StatefulWidget {
 }
 
 class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
-  // TextEditingController emailController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
-  // @override
-  // void dispose() {
-  //   emailController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
 
-  // // final FirebaseAuth authInstance = FirebaseAuth.instance;
+  final FirebaseAuth authInstance = FirebaseAuth.instance;
   bool _isLoading = false;
-  // void _forgetPassFCT() async {
-  //   if (emailController.text.isEmpty || !emailController.text.contains("@")) {
-  //     Utils.flushBarErrorMessage(
-  //         'Please enter a correct email address', context);
-  //   } else {
-  //     setState(() {
-  //       _isLoading = true;
-  //     });
-  //     try {
-  //       await authInstance.sendPasswordResetEmail(
-  //           email: emailController.text.toLowerCase());
+  void _forgetPassFCT() async {
+    if (emailController.text.isEmpty || !emailController.text.contains("@")) {
+      Utils.flushBarErrorMessage(
+          'Please enter a correct email address', context);
+    } else {
+      setState(() {
+        _isLoading = true;
+      });
+      try {
+        await authInstance.sendPasswordResetEmail(
+            email: emailController.text.toLowerCase());
 
-  //       Utils.toastMessage('An email has been sent to your email address');
-  //       Navigator.pushNamed(context, RouteName.loginView);
-  //     } on FirebaseException catch (error) {
-  //       Utils.flushBarErrorMessage('${error.message}', context);
+        Utils.toastMessage('An email has been sent to your email address');
+        Navigator.pushNamed(context, RouteName.loginView);
+      } on FirebaseException catch (error) {
+        Utils.flushBarErrorMessage('${error.message}', context);
 
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     } catch (error) {
-  //       Utils.flushBarErrorMessage('$error', context);
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     } finally {
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     }
-  //   }
-  // }
+        setState(() {
+          _isLoading = false;
+        });
+      } catch (error) {
+        Utils.flushBarErrorMessage('$error', context);
+        setState(() {
+          _isLoading = false;
+        });
+      } finally {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,8 +119,8 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   ),
                 ),
                 const VerticalSpeacing(40.0),
-                const TextFieldCustom(
-                  // controller: emailController,
+                TextFieldCustom(
+                  controller: emailController,
                   enablePrefixIcon: true,
                   maxLines: 1,
                   icon: Icons.email,
@@ -131,7 +133,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 RoundedButton(
                   title: 'Send',
                   onpress: () {
-                    // _forgetPassFCT();
+                    _forgetPassFCT();
                   },
                   bgColor: AppColor.simpleBgbuttonColor,
                   titleColor: AppColor.simpleBgTextColor,
