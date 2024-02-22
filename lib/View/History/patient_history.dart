@@ -1,9 +1,7 @@
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../GlobalColors/colors.dart';
-import '../../components/appBarField/appBar_field.dart';
 import '../Hospital/widgets/patients_widget.dart';
 
 class PatientHistory extends StatelessWidget {
