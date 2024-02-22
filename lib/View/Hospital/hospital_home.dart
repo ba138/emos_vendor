@@ -2,11 +2,10 @@ import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/View/Hospital/widgets/patients_widget.dart';
 import 'package:emos_vendor/View/Hospital/widgets/top_hospitals_widget.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../components/customswitch/customswitch.dart';
-import '../../routes/routes_name.dart';
 
 class HospitalHome extends StatelessWidget {
   const HospitalHome({super.key});
@@ -101,7 +100,10 @@ class HospitalHome extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.patientHistory);
+                        },
                         child: Text(
                           'View all',
                           style: GoogleFonts.getFont(
@@ -118,7 +120,7 @@ class HospitalHome extends StatelessWidget {
                   ),
                   const VerticalSpeacing(10.0),
                   PatientCartWidget(fun: () {}),
-                  const VerticalSpeacing(16.0),
+                  const VerticalSpeacing(10.0),
                   PatientCartWidget(fun: () {}),
                 ],
               ),
