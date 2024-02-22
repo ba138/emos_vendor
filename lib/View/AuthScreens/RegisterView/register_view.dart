@@ -135,7 +135,24 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                     ),
-                    const VerticalSpeacing(40.0),
+                    const VerticalSpeacing(10.0),
+                    Container(
+                      height: 72.0,
+                      width: 72.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(36.0),
+                        color: AppColor.circularAvatarColor,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.camera_alt_outlined,
+                              color: AppColor.bgFillColor,
+                            )),
+                      ),
+                    ),
+                    const VerticalSpeacing(20.0),
                     const TextFieldCustom(
                       // controller: emailController,
                       enablePrefixIcon: true,
@@ -160,6 +177,15 @@ class _RegisterViewState extends State<RegisterView> {
                       maxLines: 1,
                       icon: Icons.lock_outline,
                       hintText: 'Renter your password...',
+                    ),
+                    const VerticalSpeacing(32.0),
+                    const TextFieldCustom(
+                      // controller: confirmPasswordController,
+                      enablePrefixIcon: true,
+
+                      maxLines: 1,
+                      icon: Icons.phone_outlined,
+                      hintText: 'Enter your phone number...',
                     ),
                     const VerticalSpeacing(32.0),
                     RoundedButton(

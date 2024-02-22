@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "840638710221",
+    "firebase_url": "https://emos-fe671-default-rtdb.firebaseio.com",
+    "project_id": "emos-fe671",
+    "storage_bucket": "emos-fe671.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840638710221:android:db818b178dc062f5788484",
+        "android_client_info": {
+          "package_name": "com.example.emos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840638710221-g1rdbs3agt4amp2df6siofrehna95t02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emos",
+            "certificate_hash": "f9f2ad4f1b9f0d0e9d3b3568e41c416da70ef4e8"
+          }
+        },
+        {
+          "client_id": "840638710221-9k1e6a4vqujf6pkbmq6hotr5d15v0mvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHShSXsCiFlV1KKOLCmTKMIao_Dkp6zDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840638710221-7o8sqobdtmqolpl7jhoahpsrceaklret.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840638710221:android:b1a9855ec9d255f1788484",
+        "android_client_info": {
+          "package_name": "com.example.emos_vendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840638710221-9k1e6a4vqujf6pkbmq6hotr5d15v0mvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHShSXsCiFlV1KKOLCmTKMIao_Dkp6zDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840638710221-7o8sqobdtmqolpl7jhoahpsrceaklret.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
