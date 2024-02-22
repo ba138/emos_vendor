@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -7,6 +9,7 @@ import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../components/loading_manager.dart';
 import '../../../routes/routes_name.dart';
+import '../../../utils/utils.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -17,66 +20,69 @@ class RegisterView extends StatefulWidget {
 
 class _RegisterViewState extends State<RegisterView> {
   final _formKey = GlobalKey<FormState>();
-  // TextEditingController emailController = TextEditingController();
-  // TextEditingController passwordController = TextEditingController();
-  // TextEditingController confirmPasswordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
 
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  //   passwordController.dispose();
-  //   confirmPasswordController.dispose();
-  //   emailController.dispose();
-  // }
+  @override
+  void dispose() {
+    super.dispose();
+    passwordController.dispose();
+    confirmPasswordController.dispose();
+    emailController.dispose();
+    phoneController.dispose();
+  }
 
-  // final FirebaseAuth authInstance = FirebaseAuth.instance;
+  final FirebaseAuth authInstance = FirebaseAuth.instance;
 
   bool _isLoading = false;
-  // void _submitFormOnRegister() async {
-  //   // Form validation... (same as before)
-  //   final isValid = _formKey.currentState!.validate();
+  void _submitFormOnRegister() async {
+    // Form validation... (same as before)
+    final isValid = _formKey.currentState!.validate();
 
-  //   if (isValid) {
-  //     setState(() {
-  //       _isLoading = true;
-  //     });
-  //     _formKey.currentState!.save();
-  //     if (passwordController.text != confirmPasswordController.text) {
-  //       Utils.toastMessage('Passwords do not match');
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //       return;
-  //     }
-  //     try {
-  //       await authInstance.createUserWithEmailAndPassword(
-  //         email: emailController.text.toLowerCase().trim(),
-  //         password: passwordController.text.trim(),
-  //       );
+    if (isValid) {
+      setState(() {
+        _isLoading = true;
+      });
+      _formKey.currentState!.save();
+      if (passwordController.text != confirmPasswordController.text) {
+        Utils.toastMessage('Passwords do not match');
+        setState(() {
+          _isLoading = false;
+        });
+        return;
+      }
+      try {
+        await authInstance.createUserWithEmailAndPassword(
+          email: emailController.text.toLowerCase().trim(),
+          password: passwordController.text.trim(),
+        );
 
-  //       // Choose either Firestore or RTDB:
-  //       final User? user = authInstance.currentUser;
-  //       final uid = user!.uid;
+        // Choose either Firestore or RTDB:
+        final User? user = authInstance.currentUser;
+        final uid = user!.uid;
 
-  //       await FirebaseDatabase.instance.ref().child('users').child(uid).set({
-  //         'id': uid,
-  //         'email': emailController.text.toLowerCase(),
-  //         'createdAt': ServerValue.timestamp, // Use server-side timestamp
-  //       });
+        await FirebaseDatabase.instance.ref().child('users').child(uid).set({
+          'id': uid,
+          'email': emailController.text.toLowerCase(),
+          'phone No': phoneController.text.toLowerCase(),
+          'createdAt': ServerValue.timestamp, // Use server-side timestamp
+        });
 
-  //       Navigator.pushNamed(context, RouteName.homeView);
-  //       Utils.toastMessage('Successfully Registered');
-  //     } on FirebaseException catch (e) {
-  //       Utils.flushBarErrorMessage('${e.message}', context);
-  //     } catch (e) {
-  //       Utils.flushBarErrorMessage('$e', context);
-  //     } finally {
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     }
-  //   }
-  // }
+        Navigator.pushNamed(context, RouteName.homeScreen);
+        Utils.toastMessage('Successfully Registered');
+      } on FirebaseException catch (e) {
+        Utils.flushBarErrorMessage('${e.message}', context);
+      } catch (e) {
+        Utils.flushBarErrorMessage('$e', context);
+      } finally {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -153,16 +159,16 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ),
                     const VerticalSpeacing(20.0),
-                    const TextFieldCustom(
-                      // controller: emailController,
+                    TextFieldCustom(
+                      controller: emailController,
                       enablePrefixIcon: true,
                       maxLines: 1,
                       icon: Icons.mail,
                       hintText: 'Enter your email...',
                     ),
                     const VerticalSpeacing(32.0),
-                    const TextFieldCustom(
-                      // controller: passwordController,
+                    TextFieldCustom(
+                      controller: passwordController,
                       enablePrefixIcon: true,
                       maxLines: 1,
                       icon: Icons.lock_outline,
@@ -171,18 +177,17 @@ class _RegisterViewState extends State<RegisterView> {
                       hintText: 'Enter your password...',
                     ),
                     const VerticalSpeacing(32.0),
-                    const TextFieldCustom(
-                      // controller: confirmPasswordController,
+                    TextFieldCustom(
+                      controller: confirmPasswordController,
                       enablePrefixIcon: true,
                       maxLines: 1,
                       icon: Icons.lock_outline,
                       hintText: 'Renter your password...',
                     ),
                     const VerticalSpeacing(32.0),
-                    const TextFieldCustom(
-                      // controller: confirmPasswordController,
+                    TextFieldCustom(
+                      controller: phoneController,
                       enablePrefixIcon: true,
-
                       maxLines: 1,
                       icon: Icons.phone_outlined,
                       hintText: 'Enter your phone number...',
@@ -191,8 +196,7 @@ class _RegisterViewState extends State<RegisterView> {
                     RoundedButton(
                       title: 'Register',
                       onpress: () {
-                        Navigator.pushNamed(context, RouteName.homeScreen);
-                        // _submitFormOnRegister();
+                        _submitFormOnRegister();
                       },
                       bgColor: AppColor.simpleBgbuttonColor,
                       titleColor: AppColor.simpleBgTextColor,

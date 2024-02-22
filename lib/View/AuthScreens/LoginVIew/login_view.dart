@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -7,6 +8,7 @@ import '../../../components/appBarField/appBar_field.dart';
 import '../../../components/coustem_text_field/coustem_text_field.dart';
 import '../../../components/loading_manager.dart';
 import '../../../routes/routes_name.dart';
+import '../../../utils/utils.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -17,48 +19,48 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   final _formKey = GlobalKey<FormState>();
-  // TextEditingController emailController = TextEditingController();
-  // TextEditingController passwordController = TextEditingController();
-  // final FirebaseAuth authInstance = FirebaseAuth.instance;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  final FirebaseAuth authInstance = FirebaseAuth.instance;
 
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  //   emailController.dispose();
-  //   passwordController.dispose();
-  // }
+  @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
 
   bool _isLoading = false;
-  // void _submitFormOnLogin() async {
-  //   final isValid = _formKey.currentState!.validate();
-  //   if (isValid) {
-  //     _formKey.currentState!.save();
-  //     setState(() {
-  //       _isLoading = true;
-  //     });
-  //     try {
-  //       await authInstance.signInWithEmailAndPassword(
-  //           email: emailController.text.toLowerCase().trim(),
-  //           password: passwordController.text.trim());
-  //       Utils.toastMessage('SuccessFully Login');
-  //       Navigator.pushNamed(context, RouteName.homeView);
-  //     } on FirebaseException catch (e) {
-  //       Utils.flushBarErrorMessage('NetWork Error $e', context);
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     } catch (e) {
-  //       Utils.flushBarErrorMessage('SignUp Fail', context);
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     } finally {
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //     }
-  //   }
-  // }
+  void _submitFormOnLogin() async {
+    final isValid = _formKey.currentState!.validate();
+    if (isValid) {
+      _formKey.currentState!.save();
+      setState(() {
+        _isLoading = true;
+      });
+      try {
+        await authInstance.signInWithEmailAndPassword(
+            email: emailController.text.toLowerCase().trim(),
+            password: passwordController.text.trim());
+        Utils.toastMessage('SuccessFully Login');
+        Navigator.pushNamed(context, RouteName.homeScreen);
+      } on FirebaseException catch (e) {
+        Utils.flushBarErrorMessage('NetWork Error $e', context);
+        setState(() {
+          _isLoading = false;
+        });
+      } catch (e) {
+        Utils.flushBarErrorMessage('SignUp Fail', context);
+        setState(() {
+          _isLoading = false;
+        });
+      } finally {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -118,16 +120,16 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     const VerticalSpeacing(40.0),
-                    const TextFieldCustom(
-                      // controller: emailController,
+                    TextFieldCustom(
+                      controller: emailController,
                       enablePrefixIcon: true,
                       maxLines: 1,
                       icon: Icons.mail,
                       hintText: 'Enter your email...',
                     ),
                     const VerticalSpeacing(32.0),
-                    const TextFieldCustom(
-                      // controller: passwordController,
+                    TextFieldCustom(
+                      controller: passwordController,
                       enablePrefixIcon: true,
                       maxLines: 1,
                       icon: Icons.lock_outline,
@@ -160,8 +162,7 @@ class _LoginViewState extends State<LoginView> {
                     RoundedButton(
                       title: 'Login',
                       onpress: () {
-                        Navigator.pushNamed(context, RouteName.homeScreen);
-                        // _submitFormOnLogin();
+                        _submitFormOnLogin();
                       },
                       bgColor: AppColor.simpleBgbuttonColor,
                       titleColor: AppColor.simpleBgTextColor,
