@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/History/patient_history.dart';
 import 'package:emos_vendor/View/Hospital/Add_hospital.dart';
 import 'package:emos_vendor/View/Hospital/hospital_home.dart';
 import 'package:emos_vendor/View/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
@@ -79,6 +80,10 @@ class Routes {
       case RouteName.hospitalHome:
         return MaterialPageRoute(
           builder: (BuildContext context) => const HospitalHome(),
+        );
+      case RouteName.patientHistory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const PatientHistory(),
         );
       default:
         return MaterialPageRoute(
