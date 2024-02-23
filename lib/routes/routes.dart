@@ -9,14 +9,17 @@ import 'package:emos_vendor/View/addClinic/add_clinic.dart';
 import 'package:emos_vendor/View/addDoctorAtHome/add_doctor_at_home.dart';
 import 'package:emos_vendor/View/addLaboratory/add_laboratory.dart';
 import 'package:emos_vendor/View/addRadiology/add_radiology.dart';
+import 'package:emos_vendor/View/chat/chat_screen.dart';
 import 'package:emos_vendor/View/home/home_screen.dart';
+import 'package:emos_vendor/View/notifications/notifications.dart';
+import 'package:emos_vendor/View/profile/profile.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
-
 import '../View/OnBoardingScreens/onBoarding1.dart';
 import '../View/OnBoardingScreens/onBoarding2.dart';
 import '../View/OnBoardingScreens/onBoarding3.dart';
 import '../View/OnBoardingScreens/splash_screen.dart';
+import '../View/bottomNavigation/bottom_navigation.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -84,6 +87,22 @@ class Routes {
       case RouteName.patientHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const PatientHistory(),
+        );
+      case RouteName.bottomBar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const BottomBar(),
+        );
+      case RouteName.chatScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ChatScreen(),
+        );
+      case RouteName.notificationScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const NotificationScreen(),
+        );
+      case RouteName.profileScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ProfileScreen(),
         );
       default:
         return MaterialPageRoute(

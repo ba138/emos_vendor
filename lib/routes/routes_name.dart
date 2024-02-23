@@ -15,4 +15,8 @@ class RouteName {
   static const String addRadiology = ('/add_radiology');
   static const String hospitalHome = ('/hospital_home');
   static const String patientHistory = ('/patient_history');
+  static const String bottomBar = ('/bottom_bar');
+  static const String chatScreen = ('/chat_screen');
+  static const String notificationScreen = ('/notifications_screen');
+  static const String profileScreen = ('/profile_screen');
 }

@@ -61,7 +61,7 @@ class HospitalHome extends StatelessWidget {
         ),
         const VerticalSpeacing(16.0),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.65,
+          height: MediaQuery.of(context).size.height * 0.59,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
