@@ -211,7 +211,7 @@ class AddHospital extends StatelessWidget {
                 RoundedButton(
                   title: 'Continue',
                   onpress: () {
-                    Navigator.pushNamed(context, RouteName.hospitalHome);
+                    Navigator.pushNamed(context, RouteName.bottomBar);
                   },
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
