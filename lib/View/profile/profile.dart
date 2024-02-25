@@ -1,3 +1,4 @@
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
@@ -101,7 +102,15 @@ class ProfileScreen extends StatelessWidget {
                         ontap: () {
                           // Navigator.pushNamed(
                           //     context, RouteName.selectAlergyview);
-                        }, iconColor: AppColor.bgFillColor,
+                        },
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {},
+                        icon: Icons.star,
+                        title: 'Rating',
+                        iconColor: Colors.amber,
                       ),
                       const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
@@ -109,17 +118,9 @@ class ProfileScreen extends StatelessWidget {
                           // Navigator.pushNamed(
                           //     context, RouteName.medicalhistoryview);
                         },
-                        icon: Icons.star,
-                        title: 'Rating', iconColor: Colors.amber,
-                      ),
-                        const VerticalSpeacing(18.0),
-                      ProfileWidgetFeatures(
-                        ontap: () {
-                          // Navigator.pushNamed(
-                          //     context, RouteName.medicalhistoryview);
-                        },
                         icon: Icons.logout_outlined,
-                        title: 'Logout', iconColor: Colors.black,
+                        title: 'Logout',
+                        iconColor: Colors.black,
                       ),
                       const VerticalSpeacing(36.0),
                     ],
