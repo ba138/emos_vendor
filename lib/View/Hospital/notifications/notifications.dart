@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../GlobalColors/colors.dart';
-import '../../components/VerticalSpacing/vertical_spacing.dart';
+import '../../../GlobalColors/colors.dart';
+import '../../../components/VerticalSpacing/vertical_spacing.dart';
 import 'widgets/notificationWidget.dart';
 
 class NotificationScreen extends StatelessWidget {

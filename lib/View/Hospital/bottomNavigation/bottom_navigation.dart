@@ -1,10 +1,10 @@
 import 'package:emos_vendor/View/Hospital/hospital_home.dart';
-import 'package:emos_vendor/View/chat/chat_screen.dart';
-import 'package:emos_vendor/View/notifications/notifications.dart';
+import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
+import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:emos_vendor/View/profile/profile.dart';
 import 'package:flutter/material.dart';
 
-import '../../GlobalColors/colors.dart';
+import '../../../GlobalColors/colors.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
