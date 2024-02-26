@@ -7,6 +7,7 @@ import 'package:emos_vendor/View/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos_vendor/View/addAmbulance/add_ambulance.dart';
 import 'package:emos_vendor/View/addClinic/add_clinic.dart';
 import 'package:emos_vendor/View/addDoctorAtHome/add_doctor_at_home.dart';
+import 'package:emos_vendor/View/addDoctorAtHome/doctor_home_view.dart';
 import 'package:emos_vendor/View/addLaboratory/add_laboratory.dart';
 import 'package:emos_vendor/View/addRadiology/add_radiology.dart';
 import 'package:emos_vendor/View/chat/chat_screen.dart';
@@ -103,6 +104,10 @@ class Routes {
       case RouteName.profileScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ProfileScreen(),
+        );
+      case RouteName.doctorHomeView:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DoctorHomeView(),
         );
       default:
         return MaterialPageRoute(
