@@ -19,6 +19,8 @@ class RouteName {
   static const String chatScreen = ('/chat_screen');
   static const String notificationScreen = ('/notifications_screen');
   static const String profileScreen = ('/profile_screen');
+  static const String ambulancedashboard = ('/ambulance_dashboard');
+
   static const String clinicBottomBar = ('/clinic_bottom_bar');
 
   static const String clinicHome = ('/clinic_home');

@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/Ambulance/ambulance_dashboard.dart';
 import 'package:emos_vendor/View/Clinic/clinicChat/clinic_chat.dart';
 import 'package:emos_vendor/View/Clinic/clinicHistory/clinic_history.dart';
 import 'package:emos_vendor/View/Clinic/clinic_bottomNavigation/clinic_bottomnavigation.dart';
@@ -116,6 +117,9 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const ProfileScreen(),
         );
+      case RouteName.ambulancedashboard:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceDashboard(),);
       case RouteName.clinicBottomBar:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ClinicBottomBar(),
