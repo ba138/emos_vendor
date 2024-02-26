@@ -1,19 +1,19 @@
-import 'package:emos_vendor/View/Hospital/hospital_home.dart';
-import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
-import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
-import 'package:emos_vendor/View/Hospital/profile/profile.dart';
+import 'package:emos_vendor/View/Clinic/clinicChat/clinic_chat.dart';
+import 'package:emos_vendor/View/Clinic/clinic_notifications/clinic_nofication.dart';
+import 'package:emos_vendor/View/Clinic/clinic_profile/clinic_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../GlobalColors/colors.dart';
+import '../clinic_home.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({super.key});
+class ClinicBottomBar extends StatefulWidget {
+  const ClinicBottomBar({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<ClinicBottomBar> createState() => _ClinicBottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar>
+class _ClinicBottomBarState extends State<ClinicBottomBar>
     with SingleTickerProviderStateMixin {
   TabController? tabController;
   int selectIndex = 0;
@@ -38,10 +38,10 @@ class _BottomBarState extends State<BottomBar>
           physics: const NeverScrollableScrollPhysics(),
           controller: tabController,
           children: const [
-            HospitalHome(),
-            ChatScreen(),
-            NotificationScreen(),
-            ProfileScreen(),
+            ClinicHome(),
+            ClinicChat(),
+            ClinicNotificationScreen(),
+            ClinicProfileScreen(),
           ],
         );
       }),
