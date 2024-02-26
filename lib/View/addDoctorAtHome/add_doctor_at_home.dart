@@ -211,9 +211,7 @@ class AddDctorAtHome extends StatelessWidget {
                 const VerticalSpeacing(43.0),
                 RoundedButton(
                   title: 'Continue',
-                  onpress: () {
-                    Navigator.pushNamed(context, RouteName.doctorHomeView);
-                  },
+                  onpress: () {},
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
