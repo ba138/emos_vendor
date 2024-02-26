@@ -1,15 +1,14 @@
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
-import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddRadiology extends StatelessWidget {
-  const AddRadiology({super.key});
+class AddLaboratory extends StatelessWidget {
+  const AddLaboratory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class AddRadiology extends StatelessWidget {
                 }),
                 const VerticalSpeacing(46.0),
                 Text(
-                  "Enter your Radiology Details",
+                  "Enter your Laboratory Details",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -54,7 +53,7 @@ class AddRadiology extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Radiology Name",
+                  "Laboratory Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -69,7 +68,7 @@ class AddRadiology extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.local_hospital_outlined,
-                  hintText: 'Enter your radiology name...',
+                  hintText: 'Enter your laboratory name...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
@@ -88,11 +87,11 @@ class AddRadiology extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your radiology location...',
+                  hintText: 'Enter your laboratory location...',
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Radiology Type",
+                  "Laboratory Type",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -130,7 +129,7 @@ class AddRadiology extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Test timing",
+                  "Laboratory timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -147,28 +146,9 @@ class AddRadiology extends StatelessWidget {
                   icon: Icons.location_city_outlined,
                   hintText: '12:30Am to 9:30Pm ...',
                 ),
-                const VerticalSpeacing(30.0),
-                Text(
-                  "Available Test",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter available tests ...',
-                ),
                 const VerticalSpeacing(16.0),
                 Text(
-                  "Radiology Images",
+                  "Laboratory Images",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -230,9 +210,7 @@ class AddRadiology extends StatelessWidget {
                 const VerticalSpeacing(43.0),
                 RoundedButton(
                   title: 'Continue',
-                  onpress: () {
-                    Navigator.pushNamed(context, RouteName.radiologyBottomBar);
-                  },
+                  onpress: () {},
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
