@@ -2,18 +2,22 @@ import 'package:emos_vendor/View/Hospital/hospital_home.dart';
 import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
 import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:emos_vendor/View/Hospital/profile/profile.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_chat/labotry_chatScreen.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_home.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_notification/Labotry_notifications.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_profile/labotry_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../GlobalColors/colors.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({super.key});
+class LabotoryBottomBar extends StatefulWidget {
+  const LabotoryBottomBar({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<LabotoryBottomBar> createState() => _LabotoryBottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar>
+class _LabotoryBottomBarState extends State<LabotoryBottomBar>
     with SingleTickerProviderStateMixin {
   TabController? tabController;
   int selectIndex = 0;
@@ -38,10 +42,10 @@ class _BottomBarState extends State<BottomBar>
           physics: const NeverScrollableScrollPhysics(),
           controller: tabController,
           children: const [
-            HospitalHome(),
-            ChatScreen(),
-            NotificationScreen(),
-            ProfileScreen(),
+            LabotryHome(),
+            LabotryChatScreen(),
+            LabotryNotificationScreen(),
+            LabotryProfileScreen(),
           ],
         );
       }),

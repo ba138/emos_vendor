@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../GlobalColors/colors.dart';
+import '../../../../GlobalColors/colors.dart';
 
 
 class ProfileWidget extends StatelessWidget {

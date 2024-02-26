@@ -20,4 +20,27 @@ class RouteName {
   static const String notificationScreen = ('/notifications_screen');
   static const String profileScreen = ('/profile_screen');
   static const String ambulancedashboard = ('/ambulance_dashboard');
+
+  static const String clinicBottomBar = ('/clinic_bottom_bar');
+
+  static const String clinicHome = ('/clinic_home');
+
+  static const String clinicChat = ('/clinic_chat');
+
+  static const String clinicNotificationScreen =
+      ('/clinic_notification_screen');
+
+  static const String clinicProfileScreen = ('/clinic_profile_screen');
+  static const String clinicHistory = ('/clinic_history');
+  static const String labotryBottomBar = ('/labotry_bottom_bar');
+
+  static const String labotryHome = ('/labotry_home');
+
+  static const String labotryChat = ('/labotry_chat');
+
+  static const String labotryNotificationScreen =
+      ('/labotry_notification_screen');
+
+  static const String labotryProfileScreen = ('/labotry_profile_screen');
+  static const String labotryHistory = ('/labotry_history');
 }
