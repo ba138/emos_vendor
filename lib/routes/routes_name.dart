@@ -30,4 +30,15 @@ class RouteName {
 
   static const String clinicProfileScreen = ('/clinic_profile_screen');
   static const String clinicHistory = ('/clinic_history');
+  static const String labotryBottomBar = ('/labotry_bottom_bar');
+
+  static const String labotryHome = ('/labotry_home');
+
+  static const String labotryChat = ('/labotry_chat');
+
+  static const String labotryNotificationScreen =
+      ('/labotry_notification_screen');
+
+  static const String labotryProfileScreen = ('/labotry_profile_screen');
+  static const String labotryHistory = ('/labotry_history');
 }
