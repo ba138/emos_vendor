@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../GlobalColors/colors.dart';
+import '../../../../GlobalColors/colors.dart';
 
 class NotificationsWidget extends StatelessWidget {
   const NotificationsWidget({

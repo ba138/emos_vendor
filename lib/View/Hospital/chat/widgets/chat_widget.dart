@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../GlobalColors/colors.dart';
+import '../../../../GlobalColors/colors.dart';
 
 
 class ChatScreenWidget extends StatefulWidget {

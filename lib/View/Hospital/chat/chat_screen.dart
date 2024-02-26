@@ -1,8 +1,8 @@
-import 'package:emos_vendor/View/chat/widgets/chat_widget.dart';
+import 'package:emos_vendor/View/Hospital/chat/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../GlobalColors/colors.dart';
+import '../../../GlobalColors/colors.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
