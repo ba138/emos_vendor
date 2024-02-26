@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/Ambulance/ambulance_dashboard.dart';
 import 'package:emos_vendor/View/Hospital/History/patient_history.dart';
 import 'package:emos_vendor/View/Hospital/Add_hospital.dart';
 import 'package:emos_vendor/View/Hospital/hospital_home.dart';
@@ -103,6 +104,10 @@ class Routes {
       case RouteName.profileScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ProfileScreen(),
+        );
+      case RouteName.ambulancedashboard:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceDashboard(),
         );
       default:
         return MaterialPageRoute(
