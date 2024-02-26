@@ -14,6 +14,12 @@ import 'package:emos_vendor/View/Ambulance/add_ambulance.dart';
 import 'package:emos_vendor/View/Clinic/add_clinic.dart';
 import 'package:emos_vendor/View/DoctorAtHome/add_doctor_at_home.dart';
 import 'package:emos_vendor/View/Laboratory/add_laboratory.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_bottomNavigation/labotry_bottomBar.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_chat/labotry_chatScreen.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_history/labotry_history.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_home.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_notification/Labotry_notifications.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_profile/labotry_profile.dart';
 import 'package:emos_vendor/View/Radiology/add_radiology.dart';
 import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
 import 'package:emos_vendor/View/home/home_screen.dart';
@@ -133,6 +139,30 @@ class Routes {
       case RouteName.clinicHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ClinicHistory(),
+        );
+      case RouteName.labotryBottomBar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotoryBottomBar(),
+        );
+      case RouteName.labotryChat:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryChatScreen(),
+        );
+      case RouteName.labotryHome:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryHome(),
+        );
+      case RouteName.labotryNotificationScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryNotificationScreen(),
+        );
+      case RouteName.labotryProfileScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryProfileScreen(),
+        );
+      case RouteName.labotryHistory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryPatientHistory(),
         );
       default:
         return MaterialPageRoute(
