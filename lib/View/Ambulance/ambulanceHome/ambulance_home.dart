@@ -4,8 +4,15 @@ import 'package:emos_vendor/components/customswitch/customswitch.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AmbulanceHome extends StatelessWidget {
+class AmbulanceHome extends StatefulWidget {
   const AmbulanceHome({super.key});
+
+  @override
+  State<AmbulanceHome> createState() => _AmbulanceHomeState();
+}
+
+class _AmbulanceHomeState extends State<AmbulanceHome> {
+  bool isOnline = false;
 
   @override
   Widget build(BuildContext context) {
@@ -17,51 +24,125 @@ class AmbulanceHome extends StatelessWidget {
           decoration: const BoxDecoration(
             color: AppColor.bgFillColor,
           ),
-          child: Row(
-            children: [
-              const SizedBox(width: 30.0),
-              const CircleAvatar(
-                radius: 40,
-                backgroundImage: NetworkImage(
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                ),
-              ),
-              const SizedBox(width: 10.0),
-              Text.rich(
-                TextSpan(
-                  text: 'Hi Hiren, \n',
-                  style: GoogleFonts.getFont(
-                    "Poppins",
-                    textStyle: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.whiteColor,
+          child: Padding(
+            padding: const EdgeInsets.only(
+              left: 20,
+              right: 20,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const CircleAvatar(
+                      radius: 40,
+                      backgroundImage: NetworkImage(
+                        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      ),
                     ),
-                  ),
-                  children: const <TextSpan>[
-                    TextSpan(
-                      text: 'Welcome back!',
-                      style: TextStyle(
-                        color: AppColor.hometxtColor,
-                        fontSize: 14.0,
+                    const SizedBox(width: 10.0),
+                    Text.rich(
+                      TextSpan(
+                        text: 'Hi Hiren, \n',
+                        style: GoogleFonts.getFont(
+                          "Poppins",
+                          textStyle: const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w400,
+                            color: AppColor.whiteColor,
+                          ),
+                        ),
+                        children: const <TextSpan>[
+                          TextSpan(
+                            text: 'Welcome back!',
+                            style: TextStyle(
+                              color: AppColor.hometxtColor,
+                              fontSize: 14.0,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(width: 30.0),
-              const CustomSwitch(),
-            ],
+                Container(
+                  height: 30,
+                  width: 94,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffFFFFFF),
+                    borderRadius: BorderRadius.circular(28),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          // mapRepository.driverIsOffLineNow();
+                          setState(() {
+                            isOnline = false;
+                            // driveronline = false;
+                          });
+                        },
+                        child: Container(
+                          height: 30,
+                          width: 46,
+                          decoration: BoxDecoration(
+                            color: isOnline ? null : const Color(0xff7EE3CB),
+                            borderRadius: BorderRadius.circular(22),
+                          ),
+                          child: Center(
+                            child: Text('Offline',
+                                style: GoogleFonts.getFont(
+                                  "Poppins",
+                                  textStyle: TextStyle(
+                                      color: isOnline
+                                          ? Colors.black
+                                          : Colors.white,
+                                      fontSize: 12),
+                                )),
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () async {
+                          setState(() {
+                            isOnline = true;
+                            // driveronline = true;
+                          });
+                        },
+                        child: Container(
+                          height: 30,
+                          width: 46,
+                          decoration: BoxDecoration(
+                            color: isOnline ? const Color(0xff7EE3CB) : null,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Online',
+                              style: GoogleFonts.getFont(
+                                "Poppins",
+                                textStyle: TextStyle(
+                                    color:
+                                        isOnline ? Colors.white : Colors.black,
+                                    fontSize: 12),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         Container(
-          height: MediaQuery.of(context).size.height * 0.59,
+          height: MediaQuery.of(context).size.height * 0.67,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/map.png"),
-            ),
-          ),
+          child: const Text("Map Here"),
         )
       ]),
     );
