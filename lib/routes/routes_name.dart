@@ -19,4 +19,5 @@ class RouteName {
   static const String chatScreen = ('/chat_screen');
   static const String notificationScreen = ('/notifications_screen');
   static const String profileScreen = ('/profile_screen');
+  static const String ambolancedashboard = ('/ambolance_dashboard');
 }

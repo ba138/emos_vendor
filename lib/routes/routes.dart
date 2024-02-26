@@ -4,7 +4,7 @@ import 'package:emos_vendor/View/Hospital/hospital_home.dart';
 import 'package:emos_vendor/View/AuthScreens/ForgetPasswordView/forget_password_screen.dart';
 import 'package:emos_vendor/View/AuthScreens/LoginVIew/login_view.dart';
 import 'package:emos_vendor/View/AuthScreens/RegisterView/register_view.dart';
-import 'package:emos_vendor/View/addAmbulance/add_ambulance.dart';
+import 'package:emos_vendor/View/Ambulance/add_ambulance.dart';
 import 'package:emos_vendor/View/addClinic/add_clinic.dart';
 import 'package:emos_vendor/View/addDoctorAtHome/add_doctor_at_home.dart';
 import 'package:emos_vendor/View/addLaboratory/add_laboratory.dart';
