@@ -1,4 +1,5 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
+import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_home.dart';
 import 'package:flutter/material.dart';
 
 class AmbulanceDashboard extends StatefulWidget {
@@ -32,7 +33,7 @@ class _AmbulanceDashboardState extends State<AmbulanceDashboard>
         return TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: tabController,
-          children: const [],
+          children: const [AmbulanceHome()],
         );
       }),
       bottomNavigationBar: BottomNavigationBar(
