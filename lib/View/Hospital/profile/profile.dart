@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../GlobalColors/colors.dart';
-import '../../components/VerticalSpacing/vertical_spacing.dart';
+import '../../../GlobalColors/colors.dart';
+import '../../../components/VerticalSpacing/vertical_spacing.dart';
 import 'widgets/profile_widget.dart';
 import 'widgets/profile_widget_feature.dart';
 
