@@ -7,9 +7,17 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddDctorAtHome extends StatelessWidget {
+class AddDctorAtHome extends StatefulWidget {
   const AddDctorAtHome({super.key});
 
+  @override
+  State<AddDctorAtHome> createState() => _AddDctorAtHomeState();
+}
+
+class _AddDctorAtHomeState extends State<AddDctorAtHome> {
+  String selectedPrice = '200Pkr'; // Default value
+  String selectedType = "Private";
+  String ambulanceDetail = "Basic";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +77,45 @@ class AddDctorAtHome extends StatelessWidget {
                   maxLines: 1,
                   icon: Icons.local_hospital_outlined,
                   hintText: 'Enter your doctor name...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Doctor Specialist",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedType,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedType = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Private',
+                    'Public',
+                    'Goverment',
+                    'SemiGoverment'
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
