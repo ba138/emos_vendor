@@ -6,14 +6,15 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AmbulanceDetailScreen extends StatefulWidget {
-  const AmbulanceDetailScreen({super.key});
+class AmbulanceDetailEditScreen extends StatefulWidget {
+  const AmbulanceDetailEditScreen({super.key});
 
   @override
-  State<AmbulanceDetailScreen> createState() => _AmbulanceDetailScreenState();
+  State<AmbulanceDetailEditScreen> createState() =>
+      _AmbulanceDetailEditScreenState();
 }
 
-class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
+class _AmbulanceDetailEditScreenState extends State<AmbulanceDetailEditScreen> {
   String selectedPrice = '200Pkr'; // Default value
   String selectedType = "Private";
   @override

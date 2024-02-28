@@ -171,9 +171,9 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const LabotryPatientHistory(),
         );
-      case RouteName.ambulanceDetailScreen:
+      case RouteName.ambulanceDetailEditScreen:
         return MaterialPageRoute(
-          builder: (BuildContext context) => const AmbulanceDetailScreen(),
+          builder: (BuildContext context) => const AmbulanceDetailEditScreen(),
         );
       case RouteName.ambulanceTotalReviewScreen:
         return MaterialPageRoute(
