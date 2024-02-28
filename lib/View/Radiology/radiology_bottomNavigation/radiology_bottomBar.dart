@@ -1,7 +1,7 @@
 import 'package:emos_vendor/View/Radiology/Radiology_chat/radiology_chatScreen.dart';
 import 'package:emos_vendor/View/Radiology/Radiology_notification/Radiology_notifications.dart';
-import 'package:emos_vendor/View/Radiology/Radiology_profile/labotry_profile.dart';
 import 'package:emos_vendor/View/Radiology/radiology_home.dart';
+import 'package:emos_vendor/View/Radiology/radiology_profile/radiology_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../GlobalColors/colors.dart';

@@ -1,7 +1,3 @@
-import 'package:emos_vendor/View/Hospital/hospital_home.dart';
-import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
-import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
-import 'package:emos_vendor/View/Hospital/profile/profile.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_chat/labotry_chatScreen.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_home.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_notification/Labotry_notifications.dart';
