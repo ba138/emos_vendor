@@ -43,7 +43,8 @@ class RouteName {
 
   static const String labotryProfileScreen = ('/labotry_profile_screen');
   static const String labotryHistory = ('/labotry_history');
-  static const String ambulanceDetailEditScreen = ('/ambulance_detail_screen');
+  static const String ambulanceDetailEditScreen =
+      ('/ambulance_detail_edit_screen');
   static const String ambulanceTotalReviewScreen =
       ('/ambulance_Total_review_screen');
   static const String radiologyBottomBar = ('/radiology_bottom_bar');
@@ -57,4 +58,5 @@ class RouteName {
 
   static const String radiologyProfileScreen = ('/radiology_profile_screen');
   static const String radiologyHistory = ('/radiology_history');
+  static const String ambulanceDetailScreen = ('/ambulance_detail_screen');
 }

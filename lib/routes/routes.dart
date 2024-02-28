@@ -1,4 +1,5 @@
 import 'package:emos_vendor/View/Ambulance/Ambulance_Profile/ambulance_detail_screen.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Profile/ambulance_edit_detail_screen.dart';
 import 'package:emos_vendor/View/Ambulance/Ambulance_Notification/total_rating_screen.dart';
 import 'package:emos_vendor/View/Ambulance/Ambulance_Bottom_Navigation/ambulance_dashboard.dart';
 import 'package:emos_vendor/View/Clinic/clinicChat/clinic_chat.dart';
@@ -211,6 +212,10 @@ class Routes {
       case RouteName.radiologyHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RadiologyPatientHistory(),
+        );
+      case RouteName.ambulanceDetailScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceDetailScreen(),
         );
       default:
         return MaterialPageRoute(

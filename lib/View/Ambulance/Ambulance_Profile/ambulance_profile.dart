@@ -102,7 +102,7 @@ class AmbulanceProfileScreen extends StatelessWidget {
                         ontap: () {
                           Navigator.pushNamed(
                             context,
-                            RouteName.ambulanceDetailEditScreen,
+                            RouteName.ambulanceDetailScreen,
                           );
                         },
                         iconColor: AppColor.bgFillColor,
