@@ -1,5 +1,7 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_home.dart';
+import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_notification.dart';
+import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_profile.dart';
 import 'package:flutter/material.dart';
 
 class AmbulanceDashboard extends StatefulWidget {
@@ -23,7 +25,7 @@ class _AmbulanceDashboardState extends State<AmbulanceDashboard>
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -33,7 +35,11 @@ class _AmbulanceDashboardState extends State<AmbulanceDashboard>
         return TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: tabController,
-          children: const [AmbulanceHome()],
+          children: const [
+            AmbulanceHome(),
+            AmbulanceNotificationvScreen(),
+            AmbulanceProfileScreen()
+          ],
         );
       }),
       bottomNavigationBar: BottomNavigationBar(
@@ -43,12 +49,6 @@ class _AmbulanceDashboardState extends State<AmbulanceDashboard>
               Icons.home,
             ),
             label: ('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.chat_outlined,
-            ),
-            label: ('chat'),
           ),
           BottomNavigationBarItem(
               icon: Icon(
