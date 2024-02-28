@@ -1,3 +1,4 @@
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -106,7 +107,10 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.hospitalTotalRating);
+                        },
                         icon: Icons.star,
                         title: 'Rating',
                         iconColor: Colors.amber,
