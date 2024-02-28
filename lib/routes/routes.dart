@@ -1,4 +1,5 @@
 import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_detail_screen.dart';
+import 'package:emos_vendor/View/Ambulance/ambulanceHome/total_rating_screen.dart';
 import 'package:emos_vendor/View/Ambulance/ambulance_dashboard.dart';
 import 'package:emos_vendor/View/Clinic/clinicChat/clinic_chat.dart';
 import 'package:emos_vendor/View/Clinic/clinicHistory/clinic_history.dart';
@@ -173,6 +174,10 @@ class Routes {
       case RouteName.ambulanceDetailScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AmbulanceDetailScreen(),
+        );
+      case RouteName.ambulanceTotalReviewScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceTotalReview(),
         );
       default:
         return MaterialPageRoute(

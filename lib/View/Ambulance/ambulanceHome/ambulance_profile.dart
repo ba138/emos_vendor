@@ -109,7 +109,12 @@ class AmbulanceProfileScreen extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.ambulanceTotalReviewScreen,
+                          );
+                        },
                         icon: Icons.star,
                         title: 'Rating',
                         iconColor: Colors.amber,
