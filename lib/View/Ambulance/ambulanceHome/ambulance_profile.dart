@@ -1,5 +1,6 @@
 import 'package:emos_vendor/View/Hospital/profile/widgets/profile_widget.dart';
 import 'package:emos_vendor/View/Hospital/profile/widgets/profile_widget_feature.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -99,8 +100,10 @@ class AmbulanceProfileScreen extends StatelessWidget {
                         icon: Icons.emergency_outlined,
                         title: 'Ambulance Detail',
                         ontap: () {
-                          // Navigator.pushNamed(
-                          //     context, RouteName.selectAlergyview);
+                          Navigator.pushNamed(
+                            context,
+                            RouteName.ambulanceDetailScreen,
+                          );
                         },
                         iconColor: AppColor.bgFillColor,
                       ),
