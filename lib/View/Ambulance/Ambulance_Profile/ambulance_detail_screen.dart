@@ -1,21 +1,20 @@
+import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
-import 'package:emos_vendor/components/appBarField/appBar_field.dart';
+import 'package:emos_vendor/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../GlobalColors/colors.dart';
-import '../../components/coustem_text_field/coustem_text_field.dart';
-
-class AddAmbulance extends StatefulWidget {
-  const AddAmbulance({super.key});
+class AmbulanceDetailEditScreen extends StatefulWidget {
+  const AmbulanceDetailEditScreen({super.key});
 
   @override
-  State<AddAmbulance> createState() => _AddAmbulanceState();
+  State<AmbulanceDetailEditScreen> createState() =>
+      _AmbulanceDetailEditScreenState();
 }
 
-class _AddAmbulanceState extends State<AddAmbulance> {
+class _AmbulanceDetailEditScreenState extends State<AmbulanceDetailEditScreen> {
   String selectedPrice = '200Pkr'; // Default value
   String selectedType = "Private";
   @override
@@ -44,19 +43,50 @@ class _AddAmbulanceState extends State<AddAmbulance> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const VerticalSpeacing(30.0),
-                AppBarField(ontap: () {
-                  Navigator.pop(context);
-                }),
-                const VerticalSpeacing(46.0),
-                Text(
-                  "Enter your ambulance details",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new,
+                        color: AppColor.textColor,
+                      ),
                     ),
+                    SizedBox(
+                        width: MediaQuery.of(context).size.width / 2 - 140),
+                    Text(
+                      "Ambulance details",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const VerticalSpeacing(46.0),
+                Container(
+                  height: 113,
+                  width: 121,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4.0),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          'https://jmcp.edu.pk/wp-content/uploads/2023/09/jth-2.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.upload_outlined,
+                          size: 60.0,
+                          color: AppColor.whiteColor,
+                        )),
                   ),
                 ),
                 const VerticalSpeacing(30.0),
@@ -207,68 +237,7 @@ class _AddAmbulanceState extends State<AddAmbulance> {
                     );
                   }).toList(),
                 ),
-                const VerticalSpeacing(16.0),
-                Text(
-                  "Ambulance Images",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(10.0),
-                Row(
-                  children: [
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                            'https://shalamarhospital.org.pk/wp-content/uploads/2023/08/BQR_5253-scaled.jpg',
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                    const SizedBox(width: 12.0),
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://jmcp.edu.pk/wp-content/uploads/2023/09/jth-2.jpg'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                  ],
-                ),
-                const VerticalSpeacing(43.0),
+                const VerticalSpeacing(22.0),
                 RoundedButton(
                   title: 'Continue',
                   onpress: () {

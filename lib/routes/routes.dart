@@ -1,4 +1,6 @@
-import 'package:emos_vendor/View/Ambulance/ambulance_dashboard.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Profile/ambulance_detail_screen.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Notification/total_rating_screen.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Bottom_Navigation/ambulance_dashboard.dart';
 import 'package:emos_vendor/View/Clinic/clinicChat/clinic_chat.dart';
 import 'package:emos_vendor/View/Clinic/clinicHistory/clinic_history.dart';
 import 'package:emos_vendor/View/Clinic/clinic_bottomNavigation/clinic_bottomnavigation.dart';
@@ -125,7 +127,8 @@ class Routes {
         );
       case RouteName.ambulancedashboard:
         return MaterialPageRoute(
-          builder: (BuildContext context) => const AmbulanceDashboard(),);
+          builder: (BuildContext context) => const AmbulanceDashboard(),
+        );
       case RouteName.clinicBottomBar:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ClinicBottomBar(),
@@ -174,6 +177,16 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const LabotryPatientHistory(),
         );
+
+      case RouteName.ambulanceDetailEditScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceDetailEditScreen(),
+        );
+      case RouteName.ambulanceTotalReviewScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AmbulanceTotalReview(),
+          ):
+
       case RouteName.radiologyBottomBar:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RadiologyBottomBar(),

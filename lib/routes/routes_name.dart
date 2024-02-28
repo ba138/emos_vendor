@@ -43,6 +43,9 @@ class RouteName {
 
   static const String labotryProfileScreen = ('/labotry_profile_screen');
   static const String labotryHistory = ('/labotry_history');
+  static const String ambulanceDetailEditScreen = ('/ambulance_detail_screen');
+  static const String ambulanceTotalReviewScreen =
+      ('/ambulance_Total_review_screen');
   static const String radiologyBottomBar = ('/radiology_bottom_bar');
 
   static const String radiologyHome = ('/radiology_home');
