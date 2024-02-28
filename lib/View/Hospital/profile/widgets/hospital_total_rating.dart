@@ -4,7 +4,6 @@ import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-
 class HospitalTotalRating extends StatefulWidget {
   const HospitalTotalRating({super.key});
 
