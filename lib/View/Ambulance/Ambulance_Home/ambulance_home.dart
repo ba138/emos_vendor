@@ -1,6 +1,5 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
 
-import 'package:emos_vendor/components/customswitch/customswitch.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

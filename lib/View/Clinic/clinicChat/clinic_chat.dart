@@ -1,5 +1,4 @@
 import 'package:emos_vendor/View/Clinic/clinicChat/widget/clinic_chat_widget.dart';
-import 'package:emos_vendor/View/Hospital/chat/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -185,7 +185,7 @@ class Routes {
       case RouteName.ambulanceTotalReviewScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AmbulanceTotalReview(),
-          ):
+        );
 
       case RouteName.radiologyBottomBar:
         return MaterialPageRoute(
