@@ -14,9 +14,12 @@ class TotalReviewCard extends StatelessWidget {
           height: 142,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-            color: AppColor.bgFillColor,
+            color: AppColor.simpleBgTextColor,
             borderRadius: BorderRadius.circular(
               12,
+            ),
+            border: Border.all(
+              color: AppColor.textFieldColor,
             ),
           ),
           child: Padding(
