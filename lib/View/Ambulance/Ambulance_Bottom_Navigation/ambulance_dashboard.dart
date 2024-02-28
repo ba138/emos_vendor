@@ -1,7 +1,7 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
-import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_home.dart';
-import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_notification.dart';
-import 'package:emos_vendor/View/Ambulance/ambulanceHome/ambulance_profile.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Home/ambulance_home.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Notification/ambulance_notification.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Profile/ambulance_profile.dart';
 import 'package:flutter/material.dart';
 
 class AmbulanceDashboard extends StatefulWidget {

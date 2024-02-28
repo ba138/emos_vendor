@@ -1,6 +1,6 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
-import 'package:emos_vendor/View/Ambulance/ambulance_dashboard.dart';
-import 'package:emos_vendor/View/Ambulance/widgets/total_review_card.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Bottom_Navigation/ambulance_dashboard.dart';
+import 'package:emos_vendor/View/Ambulance/Ambulance_Profile/widgets/total_review_card.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
