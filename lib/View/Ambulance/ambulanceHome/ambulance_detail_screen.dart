@@ -1,7 +1,6 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
-import 'package:emos_vendor/components/appBarField/appBar_field.dart';
 import 'package:emos_vendor/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +14,8 @@ class AmbulanceDetailScreen extends StatefulWidget {
 }
 
 class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
+  String selectedPrice = '200Pkr'; // Default value
+  String selectedType = "Private";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,23 +127,40 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   hintText: 'Enter your ambulance location...',
                 ),
                 const VerticalSpeacing(30.0),
-                Text(
+                const Text(
                   "Ambulance Type",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black, // Replace with your desired color
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Private',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedType,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedType = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Private',
+                    'Public',
+                    'Goverment',
+                    'SemiGoverment'
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
@@ -183,23 +201,40 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   hintText: 'Enter ambulance timing...',
                 ),
                 const VerticalSpeacing(30.0),
-                Text(
-                  "Per Kiolmeter Price",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
+                const Text(
+                  "Per Kilometer Price",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black, // Replace with your desired color
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: '200Pkr...',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedPrice,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedPrice = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    '200Pkr',
+                    '300Pkr',
+                    '400Pkr',
+                    '500Pkr'
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(22.0),
                 RoundedButton(
