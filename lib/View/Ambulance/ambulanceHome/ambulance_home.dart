@@ -139,10 +139,10 @@ class _AmbulanceHomeState extends State<AmbulanceHome> {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height * 0.67,
           width: MediaQuery.of(context).size.width,
-          child: const Text("Map Here"),
+          child: const Center(child: Text("Map Here")),
         )
       ]),
     );
