@@ -46,4 +46,15 @@ class RouteName {
   static const String ambulanceDetailEditScreen = ('/ambulance_detail_screen');
   static const String ambulanceTotalReviewScreen =
       ('/ambulance_Total_review_screen');
+  static const String radiologyBottomBar = ('/radiology_bottom_bar');
+
+  static const String radiologyHome = ('/radiology_home');
+
+  static const String radiologyChat = ('/radiology_chat');
+
+  static const String radiologyNotificationScreen =
+      ('/radiology_notification_screen');
+
+  static const String radiologyProfileScreen = ('/radiology_profile_screen');
+  static const String radiologyHistory = ('/radiology_history');
 }

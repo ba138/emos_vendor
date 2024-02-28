@@ -23,8 +23,13 @@ import 'package:emos_vendor/View/Laboratory/labotry_history/labotry_history.dart
 import 'package:emos_vendor/View/Laboratory/labotry_home.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_notification/Labotry_notifications.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_profile/labotry_profile.dart';
+import 'package:emos_vendor/View/Radiology/Radiology_bottomNavigation/radiology_bottomBar.dart';
+import 'package:emos_vendor/View/Radiology/Radiology_chat/radiology_chatScreen.dart';
+import 'package:emos_vendor/View/Radiology/Radiology_notification/Radiology_notifications.dart';
 import 'package:emos_vendor/View/Radiology/add_radiology.dart';
 import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
+import 'package:emos_vendor/View/Radiology/radiology_home.dart';
+import 'package:emos_vendor/View/Radiology/radiology_profile/radiology_profile.dart';
 import 'package:emos_vendor/View/home/home_screen.dart';
 import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:emos_vendor/View/Hospital/profile/profile.dart';
@@ -35,6 +40,7 @@ import '../View/OnBoardingScreens/onBoarding2.dart';
 import '../View/OnBoardingScreens/onBoarding3.dart';
 import '../View/OnBoardingScreens/splash_screen.dart';
 import '../View/Hospital/bottomNavigation/bottom_navigation.dart';
+import '../View/Radiology/radiology_history/radio_history.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -171,6 +177,7 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const LabotryPatientHistory(),
         );
+
       case RouteName.ambulanceDetailEditScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AmbulanceDetailEditScreen(),
@@ -178,6 +185,32 @@ class Routes {
       case RouteName.ambulanceTotalReviewScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const AmbulanceTotalReview(),
+          ):
+
+      case RouteName.radiologyBottomBar:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyBottomBar(),
+        );
+      case RouteName.radiologyChat:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyChatScreen(),
+        );
+      case RouteName.radiologyHome:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyHome(),
+        );
+      case RouteName.radiologyNotificationScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) =>
+              const RadiologyNotificationScreen(),
+        );
+      case RouteName.radiologyProfileScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyProfileScreen(),
+        );
+      case RouteName.radiologyHistory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyPatientHistory(),
         );
       default:
         return MaterialPageRoute(
