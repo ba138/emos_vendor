@@ -2,7 +2,6 @@ import 'package:emos_vendor/View/DoctorAtHome/DoctorHome/home_drathome_screen.da
 import 'package:emos_vendor/View/DoctorAtHome/DoctorNotification/doctor_at_home_notifiction_screen.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_profile.dart';
 import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
-import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:flutter/material.dart';
 
 import '../../../GlobalColors/colors.dart';
