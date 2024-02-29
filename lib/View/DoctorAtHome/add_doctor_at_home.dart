@@ -1,6 +1,7 @@
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -439,7 +440,12 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                 const VerticalSpeacing(43.0),
                 RoundedButton(
                   title: 'Continue',
-                  onpress: () {},
+                  onpress: () {
+                    Navigator.pushNamed(
+                      context,
+                      RouteName.doctorathomedashboard,
+                    );
+                  },
                   bgColor: AppColor.bgFillColor,
                   titleColor: AppColor.whiteColor,
                 ),
