@@ -4,17 +4,14 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AmbulanceDetailScreen extends StatefulWidget {
-  const AmbulanceDetailScreen({super.key});
+class DoctorAtHomeDetailView extends StatefulWidget {
+  const DoctorAtHomeDetailView({super.key});
 
   @override
-  State<AmbulanceDetailScreen> createState() => _AmbulanceDetailScreenState();
+  State<DoctorAtHomeDetailView> createState() => _DoctorAtHomeDetailViewState();
 }
 
-class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
-  String selectedPrice = '200Pkr'; // Default value
-  String selectedType = "Private";
-  String ambulanceDetail = "Basic";
+class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,9 +48,9 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                       ),
                     ),
                     SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 - 180),
+                        width: MediaQuery.of(context).size.width / 2 - 160),
                     Text(
-                      "Ambulance details",
+                      "Doctor details",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
@@ -64,12 +61,12 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                       ),
                     ),
                     SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 - 180),
+                        width: MediaQuery.of(context).size.width / 2 - 160),
                     IconButton(
                       onPressed: () {
                         Navigator.pushNamed(
                           context,
-                          RouteName.ambulanceDetailEditScreen,
+                          RouteName.doctorathomeDetaileditscreen,
                         );
                       },
                       icon: const Icon(
@@ -105,7 +102,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance Name",
+                  "Doctor Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -116,7 +113,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   ),
                 ),
                 Text(
-                  "K-Ambulance",
+                  "Basit Aly Shah",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -128,7 +125,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance Location",
+                  "Doctor Location",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -151,7 +148,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Ambulance Details",
+                  "Doctor Specialist",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -160,7 +157,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   ),
                 ),
                 Text(
-                  "Private",
+                  "Endocrinology",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -172,7 +169,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Ambulance Type",
+                  "Doctor Language",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -181,7 +178,49 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   ),
                 ),
                 Text(
-                  "Basic",
+                  "Hindi",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: AppColor.textColor2,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(30.0),
+                const Text(
+                  "Doctor Experince",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color:
+                        AppColor.textColor, // Replace with your desired color
+                  ),
+                ),
+                Text(
+                  "6Years",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: AppColor.textColor2,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(30.0),
+                const Text(
+                  "Doctor Degrees",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color:
+                        AppColor.textColor, // Replace with your desired color
+                  ),
+                ),
+                Text(
+                  "Doctor of Nursing Practice",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -216,7 +255,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance timing",
+                  "Doctor timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -239,7 +278,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Per Kilometer Price",
+                  "Visit Charges",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -248,7 +287,28 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                       ),
                 ),
                 Text(
-                  "200Pkr",
+                  "1000INR",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                      color: AppColor.textColor2,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(30.0),
+                const Text(
+                  "Doctor Bio",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color:
+                          AppColor.textColor // Replace with your desired color
+                      ),
+                ),
+                Text(
+                  "hello there i am basit aly shah doctor Doctor of Nursing Practice having experince more then 5 years.",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(

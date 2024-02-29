@@ -59,6 +59,11 @@ class RouteName {
   static const String radiologyProfileScreen = ('/radiology_profile_screen');
   static const String radiologyHistory = ('/radiology_history');
   static const String ambulanceDetailScreen = ('/ambulance_detail_screen');
+  static const String doctorathomedashboard = ('/doctor_at_home_dashboard');
+  static const String doctorathomeDetailscreen =
+      ('/doctor_at_home_detail_screen');
+  static const String doctorathomeDetaileditscreen =
+      ('/doctor_at_home_detail_edit_screen');
     static const String clinicTotalRating = ('/clinic_total_rating');
         static const String hospitalTotalRating = ('/hospital_total_rating');
                 static const String labotryTotalRating = ('/labotry_total_rating');

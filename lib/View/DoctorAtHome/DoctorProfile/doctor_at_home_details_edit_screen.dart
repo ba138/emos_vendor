@@ -1,21 +1,22 @@
+import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
+import 'package:emos_vendor/components/coustem_text_field/coustem_text_field.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../GlobalColors/colors.dart';
-import '../../components/coustem_text_field/coustem_text_field.dart';
-
-class AddDctorAtHome extends StatefulWidget {
-  const AddDctorAtHome({super.key});
+class DoctorAtHomeDetailEditScreen extends StatefulWidget {
+  const DoctorAtHomeDetailEditScreen({super.key});
 
   @override
-  State<AddDctorAtHome> createState() => _AddDctorAtHomeState();
+  State<DoctorAtHomeDetailEditScreen> createState() =>
+      _DoctorAtHomeDetailEditScreenState();
 }
 
-class _AddDctorAtHomeState extends State<AddDctorAtHome> {
+class _DoctorAtHomeDetailEditScreenState
+    extends State<DoctorAtHomeDetailEditScreen> {
   String selectedPrice = '200INR'; // Default value
   String selectedType = "Endocrinology";
   String doctorLanguage = "Hindi";
