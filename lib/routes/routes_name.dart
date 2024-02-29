@@ -60,4 +60,6 @@ class RouteName {
   static const String radiologyHistory = ('/radiology_history');
   static const String ambulanceDetailScreen = ('/ambulance_detail_screen');
   static const String doctorathomedashboard = ('/doctor_at_home_dashboard');
+  static const String doctorathomeDetailscreen =
+      ('/doctor_at_home_detail_edit_screen');
 }

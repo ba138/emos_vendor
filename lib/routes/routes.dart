@@ -9,6 +9,7 @@ import 'package:emos_vendor/View/Clinic/clinic_home.dart';
 import 'package:emos_vendor/View/Clinic/clinic_notifications/clinic_nofication.dart';
 import 'package:emos_vendor/View/Clinic/clinic_profile/clinic_profile.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorAtHomeDashboard/doctor_at_home_dashboard.dart';
+import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_detail_screen.dart';
 import 'package:emos_vendor/View/Hospital/History/patient_history.dart';
 import 'package:emos_vendor/View/Hospital/Add_hospital.dart';
 import 'package:emos_vendor/View/Hospital/hospital_home.dart';
@@ -221,6 +222,10 @@ class Routes {
       case RouteName.doctorathomedashboard:
         return MaterialPageRoute(
           builder: (BuildContext context) => const DoctorAtHomeDashboard(),
+        );
+      case RouteName.doctorathomeDetailscreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const DoctorAtHomeDetailView(),
         );
       default:
         return MaterialPageRoute(

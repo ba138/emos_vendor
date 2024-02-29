@@ -103,7 +103,7 @@ class DoctorAtHomeProfile extends StatelessWidget {
                         ontap: () {
                           Navigator.pushNamed(
                             context,
-                            RouteName.ambulanceDetailScreen,
+                            RouteName.doctorathomeDetailscreen,
                           );
                         },
                         iconColor: AppColor.bgFillColor,
