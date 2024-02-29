@@ -15,9 +15,11 @@ class AddDctorAtHome extends StatefulWidget {
 }
 
 class _AddDctorAtHomeState extends State<AddDctorAtHome> {
-  String selectedPrice = '200Pkr'; // Default value
-  String selectedType = "Private";
-  String ambulanceDetail = "Basic";
+  String selectedPrice = '200INR'; // Default value
+  String selectedType = "Endocrinology";
+  String doctorLanguage = "Hindi";
+  String doctorExperience = "2Years";
+  String doctorDegress = "Doctor of Medicine";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,6 +96,7 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   isExpanded: true,
                   value: selectedType,
                   icon: const Icon(Icons.expand_more_outlined),
+                  underline: const Divider(color: AppColor.dividerColor),
                   iconSize: 24,
                   elevation: 16,
                   style: const TextStyle(
@@ -105,10 +108,14 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     });
                   },
                   items: <String>[
-                    'Private',
-                    'Public',
-                    'Goverment',
-                    'SemiGoverment'
+                    'Endocrinology',
+                    'Neurologist',
+                    'Dermatologist',
+                    'Pediatrician',
+                    'Psychiatrist',
+                    'Gastroenterology',
+                    'Cardiologist',
+                    'Ophthalmologist',
                   ] // Add more options as needed
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
@@ -138,6 +145,63 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
+                  "Doctor language",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: doctorLanguage,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      doctorLanguage = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Hindi',
+                    'English',
+                    'Urdu',
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Doctor location",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const TextFieldCustom(
+                  // controller: emailController,
+                  enablePrefixIcon: false,
+                  maxLines: 1,
+                  icon: Icons.location_city_outlined,
+                  hintText: 'New Dehli India...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
                   "Experience",
                   style: GoogleFonts.getFont(
                     "Roboto",
@@ -148,16 +212,35 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter your experience...',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: doctorExperience,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                    color: AppColor.bgFillColor,
+                  ),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      doctorExperience = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    '2Years',
+                    '4Years',
+                    '6Years',
+                    'More Than 8Years',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Phone No",
+                  "Doctor Degrees",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -167,12 +250,73 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter your ph no...',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: doctorDegress,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                    color: AppColor.bgFillColor,
+                  ),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      doctorDegress = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Doctor of Medicine',
+                    'Doctor of Osteopathic Medicine',
+                    'Doctor of Dental Medicine',
+                    'Doctor of Veterinary Medicine',
+                    'Doctor of Pharmacy',
+                    'Doctor of Nursing Practice',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Visiting Charge",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedPrice,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                    color: AppColor.bgFillColor,
+                  ),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedPrice = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    '200INR',
+                    '400INR',
+                    '600INR',
+                    '800INR',
+                    '1000INR',
+                    '1200INR',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
@@ -192,6 +336,44 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
                   hintText: '12:30Am to 9:30Pm ...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Doctor Bio",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const TextFieldCustom(
+                  // controller: emailController,
+                  enablePrefixIcon: false,
+                  maxLines: 1,
+                  icon: Icons.location_city_outlined,
+                  hintText: 'Enter your Bio...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Phone No",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const TextFieldCustom(
+                  // controller: emailController,
+                  enablePrefixIcon: false,
+                  maxLines: 1,
+                  icon: Icons.location_city_outlined,
+                  hintText: 'Enter your ph no...',
                 ),
                 const VerticalSpeacing(16.0),
                 Text(
