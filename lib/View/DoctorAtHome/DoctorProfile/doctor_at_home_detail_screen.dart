@@ -66,7 +66,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                       onPressed: () {
                         Navigator.pushNamed(
                           context,
-                          RouteName.ambulanceDetailEditScreen,
+                          RouteName.doctorathomeDetaileditscreen,
                         );
                       },
                       icon: const Icon(
