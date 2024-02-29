@@ -11,6 +11,13 @@ import 'package:emos_vendor/View/Clinic/clinic_profile/clinic_profile.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorAtHomeDashboard/doctor_at_home_dashboard.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_detail_screen.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_details_edit_screen.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareDashboard/home_care_dashboard.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareHome/home_care_home_screen.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareNotification/home_care_notifiction_screen.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareProfile/home_care_detail_screen.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareProfile/home_care_details_edit_screen.dart';
+import 'package:emos_vendor/View/HomeCare/HomeCareProfile/home_care_profile.dart';
+import 'package:emos_vendor/View/HomeCare/add_home_care.dart';
 import 'package:emos_vendor/View/Hospital/History/patient_history.dart';
 import 'package:emos_vendor/View/Hospital/Add_hospital.dart';
 import 'package:emos_vendor/View/Hospital/hospital_home.dart';
@@ -252,6 +259,34 @@ class Routes {
       case RouteName.radiologyTotalRating:
         return MaterialPageRoute(
           builder: (BuildContext context) => const RadiologyTotalRating(),
+        );
+      case RouteName.addHomeCare:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AddHomeCare(),
+        );
+      case RouteName.homeCareProfile:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareProfile(),
+        );
+      case RouteName.homeCareHome:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareHome(),
+        );
+      case RouteName.homeCareNotifications:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareNotification(),
+        );
+      case RouteName.homeCareDashboard:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareDashboard(),
+        );
+      case RouteName.homeCareDetailScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareDetailView(),
+        );
+      case RouteName.homeCareEditScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HomeCareDetailEditScreen(),
         );
 
       default:
