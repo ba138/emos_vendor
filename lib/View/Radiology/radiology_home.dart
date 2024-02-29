@@ -5,11 +5,16 @@ import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../components/customswitch/customswitch.dart';
 
-class RadiologyHome extends StatelessWidget {
+class RadiologyHome extends StatefulWidget {
   const RadiologyHome({super.key});
 
+  @override
+  State<RadiologyHome> createState() => _RadiologyHomeState();
+}
+
+class _RadiologyHomeState extends State<RadiologyHome> {
+  bool isOnline = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +60,74 @@ class RadiologyHome extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 30.0),
-              const CustomSwitch(),
+              Container(
+                height: 30,
+                width: 94,
+                decoration: BoxDecoration(
+                  color: const Color(0xffFFFFFF),
+                  borderRadius: BorderRadius.circular(28),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        // mapRepository.driverIsOffLineNow();
+                        setState(() {
+                          isOnline = false;
+                          // driveronline = false;
+                        });
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 46,
+                        decoration: BoxDecoration(
+                          color: isOnline ? null : const Color(0xff7EE3CB),
+                          borderRadius: BorderRadius.circular(22),
+                        ),
+                        child: Center(
+                          child: Text('Offline',
+                              style: GoogleFonts.getFont(
+                                "Poppins",
+                                textStyle: TextStyle(
+                                    color:
+                                        isOnline ? Colors.black : Colors.white,
+                                    fontSize: 12),
+                              )),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () async {
+                        setState(() {
+                          isOnline = true;
+                          // driveronline = true;
+                        });
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 46,
+                        decoration: BoxDecoration(
+                          color: isOnline ? const Color(0xff7EE3CB) : null,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Online',
+                            style: GoogleFonts.getFont(
+                              "Poppins",
+                              textStyle: TextStyle(
+                                  color: isOnline ? Colors.white : Colors.black,
+                                  fontSize: 12),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
