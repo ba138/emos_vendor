@@ -1,4 +1,5 @@
 import 'package:emos_vendor/View/DoctorAtHome/DoctorHome/home_drathome_screen.dart';
+import 'package:emos_vendor/View/DoctorAtHome/DoctorNotification/doctor_at_home_notifiction_screen.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_profile.dart';
 import 'package:emos_vendor/View/Hospital/chat/chat_screen.dart';
 import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
@@ -40,7 +41,7 @@ class _DoctorAtHomeDashboardState extends State<DoctorAtHomeDashboard>
           children: const [
             HomeDrAtHome(),
             ChatScreen(),
-            NotificationScreen(),
+            DrAtHomeNotification(),
             DoctorAtHomeProfile(),
           ],
         );
