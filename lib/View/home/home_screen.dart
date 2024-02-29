@@ -152,7 +152,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.addHomeCare);
+                      },
                       child: Container(
                         height: 100.0,
                         width: 115.0,

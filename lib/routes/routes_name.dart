@@ -64,12 +64,18 @@ class RouteName {
       ('/doctor_at_home_detail_screen');
   static const String doctorathomeDetaileditscreen =
       ('/doctor_at_home_detail_edit_screen');
-    static const String clinicTotalRating = ('/clinic_total_rating');
-        static const String hospitalTotalRating = ('/hospital_total_rating');
-                static const String labotryTotalRating = ('/labotry_total_rating');
-                                static const String radiologyTotalRating = ('/radiology_total_rating');
+  static const String clinicTotalRating = ('/clinic_total_rating');
+  static const String hospitalTotalRating = ('/hospital_total_rating');
+  static const String labotryTotalRating = ('/labotry_total_rating');
+  static const String radiologyTotalRating = ('/radiology_total_rating');
+  static const String addHomeCare = ('/add_home_care');
+  static const String homeCareProfile = ('/home_care_profile');
 
+  static const String homeCareHome = ('/home_care_home');
 
-
+  static const String homeCareNotifications = ('/home_care_notifications');
+  static const String homeCareDashboard = ('/home_care_dashboard');
+  static const String homeCareDetailScreen = ('/home_care_detail_screen');
+    static const String homeCareEditScreen = ('/home_care_edit_screen');
 
 }
