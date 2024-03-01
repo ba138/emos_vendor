@@ -44,7 +44,7 @@ class TopLabotryCardWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              VerticalSpeacing(10.0),
+              const VerticalSpeacing(10.0),
               Text.rich(
                 TextSpan(
                   text: 'Dr. Sutash Sing\n',
