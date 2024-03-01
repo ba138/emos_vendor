@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:emos_vendor/View/Radiology/Radiology_chat/radiology_chatScreen.dart';
 import 'package:emos_vendor/View/Radiology/Radiology_notification/Radiology_notifications.dart';
 import 'package:emos_vendor/View/Radiology/radiology_home.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:emos_vendor/View/Laboratory/labotry_chat/labotry_chatScreen.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_home.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_notification/Labotry_notifications.dart';

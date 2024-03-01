@@ -1,8 +1,8 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/patient_detail_dialog.dart';
 import 'package:emos_vendor/View/Hospital/notifications/widgets/notificationWidget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../GlobalColors/colors.dart';
-import '../../../components/VerticalSpacing/vertical_spacing.dart';
 
 class AmbulanceNotificationvScreen extends StatelessWidget {
   const AmbulanceNotificationvScreen({super.key});
@@ -40,53 +40,20 @@ class AmbulanceNotificationvScreen extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: ListView(
-            children: const [
-              Column(
-                children: [
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor),
-                  VerticalSpeacing(20.0),
-                  NotificationsWidget(),
-                  VerticalSpeacing(10.0),
-                  Divider(color: AppColor.dividerColor)
-                ],
-              ),
-            ],
+          child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return NotificationsWidget(
+                onpress: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const PatientDetailDialog();
+                    },
+                  );
+                },
+              );
+            },
           ),
         ),
       ),
