@@ -39,12 +39,16 @@ import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:emos_vendor/View/Hospital/profile/profile.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
+import '../View/Clinic/clinic_notifications/clinic_total_rating.dart';
+import '../View/Hospital/profile/widgets/hospital_total_rating.dart';
+import '../View/Laboratory/labotry_profile/widgets/labotry_total_rating.dart';
 import '../View/OnBoardingScreens/onBoarding1.dart';
 import '../View/OnBoardingScreens/onBoarding2.dart';
 import '../View/OnBoardingScreens/onBoarding3.dart';
 import '../View/OnBoardingScreens/splash_screen.dart';
 import '../View/Hospital/bottomNavigation/bottom_navigation.dart';
 import '../View/Radiology/radiology_history/radio_history.dart';
+import '../View/Radiology/radiology_profile/widgets/radiology_total_rating.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -233,6 +237,23 @@ class Routes {
           builder: (BuildContext context) =>
               const DoctorAtHomeDetailEditScreen(),
         );
+      case RouteName.clinicTotalRating:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ClinicTotalRating(),
+        );
+      case RouteName.hospitalTotalRating:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HospitalTotalRating(),
+        );
+      case RouteName.labotryTotalRating:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryTotalRating(),
+        );
+      case RouteName.radiologyTotalRating:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyTotalRating(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) {

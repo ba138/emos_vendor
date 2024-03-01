@@ -1,5 +1,6 @@
 import 'package:emos_vendor/View/Clinic/clinic_profile/widget/clinic_profileWidget.dart';
 import 'package:emos_vendor/View/Clinic/clinic_profile/widget/clinic_profile_features.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -106,7 +107,10 @@ class ClinicProfileScreen extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       ClinicProfileFeatureWidget(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.clinicTotalRating);
+                        },
                         icon: Icons.star,
                         title: 'Rating',
                         iconColor: Colors.amber,

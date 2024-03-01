@@ -1,4 +1,5 @@
 import 'package:emos_vendor/View/Radiology/radiology_profile/widgets/radiology_profile_widget_feature.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
@@ -106,7 +107,10 @@ class RadiologyProfileScreen extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       RadiologyProfileWidgetFeatures(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.radiologyTotalRating);
+                        },
                         icon: Icons.star,
                         title: 'Rating',
                         iconColor: Colors.amber,
