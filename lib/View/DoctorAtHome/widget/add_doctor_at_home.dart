@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
@@ -5,8 +6,8 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../GlobalColors/colors.dart';
-import '../../components/coustem_text_field/coustem_text_field.dart';
+import '../../../GlobalColors/colors.dart';
+import '../../../components/coustem_text_field/coustem_text_field.dart';
 
 class AddDctorAtHome extends StatefulWidget {
   const AddDctorAtHome({super.key});
@@ -93,38 +94,21 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     ),
                   ),
                 ),
-                DropdownButton<String>(
-                  isExpanded: true,
-                  value: selectedType,
-                  icon: const Icon(Icons.expand_more_outlined),
-                  underline: const Divider(color: AppColor.dividerColor),
-                  iconSize: 24,
-                  elevation: 16,
-                  style: const TextStyle(
-                      color: AppColor
-                          .bgFillColor), // Replace with your desired color
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      selectedType = newValue!;
-                    });
-                  },
-                  items: <String>[
-                    'Endocrinology',
-                    'Neurologist',
-                    'Dermatologist',
-                    'Pediatrician',
-                    'Psychiatrist',
-                    'Gastroenterology',
-                    'Cardiologist',
-                    'Ophthalmologist',
-                  ] // Add more options as needed
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                ),
+                const FormButtons(number: "1", name: 'Endocrinology'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'Neurologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "3", name: 'Dermatologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "4", name: 'Pediatrician'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "5", name: 'Psychiatrist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "6", name: 'Gastroenterology'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "7", name: 'Cardiologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "8", name: 'Ophthalmologist'),
                 const VerticalSpeacing(30.0),
                 Text(
                   "Doctor Education",
@@ -163,8 +147,8 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   iconSize: 24,
                   elevation: 16,
                   style: const TextStyle(
-                      color: AppColor
-                          .bgFillColor), // Replace with your desired color
+                      color:
+                          Color(0xFF2AA39C)), // Replace with your desired color
                   onChanged: (String? newValue) {
                     setState(() {
                       doctorLanguage = newValue!;
