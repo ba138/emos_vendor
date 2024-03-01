@@ -1,3 +1,5 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/add_profile_widget.dart';
+import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
@@ -5,8 +7,8 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../GlobalColors/colors.dart';
-import '../../components/coustem_text_field/coustem_text_field.dart';
+import '../../../GlobalColors/colors.dart';
+import '../../../components/coustem_text_field/coustem_text_field.dart';
 
 class AddDctorAtHome extends StatefulWidget {
   const AddDctorAtHome({super.key});
@@ -63,6 +65,8 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   ),
                 ),
                 const VerticalSpeacing(30.0),
+                const AddProfileWidget(),
+                const VerticalSpeacing(30.0),
                 Text(
                   "Doctor Name",
                   style: GoogleFonts.getFont(
@@ -93,38 +97,21 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     ),
                   ),
                 ),
-                DropdownButton<String>(
-                  isExpanded: true,
-                  value: selectedType,
-                  icon: const Icon(Icons.expand_more_outlined),
-                  underline: const Divider(color: AppColor.dividerColor),
-                  iconSize: 24,
-                  elevation: 16,
-                  style: const TextStyle(
-                      color: AppColor
-                          .bgFillColor), // Replace with your desired color
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      selectedType = newValue!;
-                    });
-                  },
-                  items: <String>[
-                    'Endocrinology',
-                    'Neurologist',
-                    'Dermatologist',
-                    'Pediatrician',
-                    'Psychiatrist',
-                    'Gastroenterology',
-                    'Cardiologist',
-                    'Ophthalmologist',
-                  ] // Add more options as needed
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                ),
+                const FormButtons(number: "1", name: 'Endocrinology'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'Neurologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "3", name: 'Dermatologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "4", name: 'Pediatrician'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "5", name: 'Psychiatrist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "6", name: 'Gastroenterology'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "7", name: 'Cardiologist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "8", name: 'Ophthalmologist'),
                 const VerticalSpeacing(30.0),
                 Text(
                   "Doctor Education",
@@ -163,8 +150,8 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   iconSize: 24,
                   elevation: 16,
                   style: const TextStyle(
-                      color: AppColor
-                          .bgFillColor), // Replace with your desired color
+                      color:
+                          Color(0xFF2AA39C)), // Replace with your desired color
                   onChanged: (String? newValue) {
                     setState(() {
                       doctorLanguage = newValue!;
@@ -375,67 +362,6 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
                   hintText: 'Enter your ph no...',
-                ),
-                const VerticalSpeacing(16.0),
-                Text(
-                  "Doctor Images",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(10.0),
-                Row(
-                  children: [
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                            'https://shalamarhospital.org.pk/wp-content/uploads/2023/08/BQR_5253-scaled.jpg',
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                    const SizedBox(width: 12.0),
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://jmcp.edu.pk/wp-content/uploads/2023/09/jth-2.jpg'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                  ],
                 ),
                 const VerticalSpeacing(43.0),
                 RoundedButton(
