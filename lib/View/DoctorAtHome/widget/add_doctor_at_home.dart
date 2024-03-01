@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/add_profile_widget.dart';
 import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
@@ -63,6 +64,8 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                     ),
                   ),
                 ),
+                const VerticalSpeacing(30.0),
+                const AddProfileWidget(),
                 const VerticalSpeacing(30.0),
                 Text(
                   "Doctor Name",
@@ -359,67 +362,6 @@ class _AddDctorAtHomeState extends State<AddDctorAtHome> {
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
                   hintText: 'Enter your ph no...',
-                ),
-                const VerticalSpeacing(16.0),
-                Text(
-                  "Doctor Images",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(10.0),
-                Row(
-                  children: [
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                            'https://shalamarhospital.org.pk/wp-content/uploads/2023/08/BQR_5253-scaled.jpg',
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                    const SizedBox(width: 12.0),
-                    Container(
-                      height: 113,
-                      width: 121,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4.0),
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                              'https://jmcp.edu.pk/wp-content/uploads/2023/09/jth-2.jpg'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Center(
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.upload_outlined,
-                              size: 60.0,
-                              color: AppColor.whiteColor,
-                            )),
-                      ),
-                    ),
-                  ],
                 ),
                 const VerticalSpeacing(43.0),
                 RoundedButton(
