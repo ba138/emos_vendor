@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
@@ -7,8 +8,15 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddHospital extends StatelessWidget {
+class AddHospital extends StatefulWidget {
   const AddHospital({super.key});
+
+  @override
+  State<AddHospital> createState() => _AddHospitalState();
+}
+
+class _AddHospitalState extends State<AddHospital> {
+  String selectedType = "Private";
 
   @override
   Widget build(BuildContext context) {
@@ -101,13 +109,71 @@ class AddHospital extends StatelessWidget {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter your hospital catagory...',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedType,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedType = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Private',
+                    'Public',
+                    'Goverment',
+                    'SemiGoverment'
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Hospital Type",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(12.0),
+                const FormButtons(number: "1", name: 'Multi Specialist'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'General'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "3", name: 'Pediatrics'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "4", name: 'Orthopedics'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "5", name: 'Cardiology'),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Medical Type",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(12.0),
+                const FormButtons(number: "1", name: 'CashLess'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'GenReimbursementeral'),
                 const VerticalSpeacing(30.0),
                 Text(
                   "Phone No",
@@ -128,25 +194,6 @@ class AddHospital extends StatelessWidget {
                   hintText: 'Enter your ph no...',
                 ),
                 const VerticalSpeacing(30.0),
-                Text(
-                  "hospital date open and off",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter date of open and close...',
-                ),
-                const VerticalSpeacing(16.0),
                 Text(
                   "Hospital Images",
                   style: GoogleFonts.getFont(
