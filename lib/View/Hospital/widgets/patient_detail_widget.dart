@@ -120,6 +120,9 @@ class PatientDetailWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(
+                      width: 12,
+                    ),
                     Container(
                       height: 36,
                       width: 90,
@@ -142,6 +145,52 @@ class PatientDetailWidget extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                const VerticalSpeacing(16),
+                Text(
+                  "Bio",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                Text(
+                  "You probably take vitamins and supplements with the goal of improving your health. ",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: AppColor.bgFillColor,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(16),
+                Text(
+                  "Medical Images",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 80,
+                  width: 102,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://compoundmed.com/images/img-banner.jpg"),
+                        fit: BoxFit.cover),
+                  ),
                 )
               ],
             ),
