@@ -27,6 +27,7 @@ import 'package:emos_vendor/View/AuthScreens/RegisterView/register_view.dart';
 import 'package:emos_vendor/View/Ambulance/add_ambulance.dart';
 import 'package:emos_vendor/View/Clinic/add_clinic.dart';
 import 'package:emos_vendor/View/DoctorAtHome/widget/add_doctor_at_home.dart';
+import 'package:emos_vendor/View/paymentHistory/payment_history.dart';
 import 'package:emos_vendor/View/Laboratory/add_laboratory.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_bottomNavigation/labotry_bottomBar.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_chat/labotry_chatScreen.dart';
@@ -287,6 +288,10 @@ class Routes {
       case RouteName.homeCareEditScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const HomeCareDetailEditScreen(),
+        );
+      case RouteName.paymentHistory:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const PymentHistory(),
         );
 
       default:

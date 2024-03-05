@@ -76,6 +76,6 @@ class RouteName {
   static const String homeCareNotifications = ('/home_care_notifications');
   static const String homeCareDashboard = ('/home_care_dashboard');
   static const String homeCareDetailScreen = ('/home_care_detail_screen');
-    static const String homeCareEditScreen = ('/home_care_edit_screen');
-
+  static const String homeCareEditScreen = ('/home_care_edit_screen');
+  static const String paymentHistory = ('/payment_history');
 }
