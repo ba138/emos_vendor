@@ -72,16 +72,38 @@ class PatientDetailWidget extends StatelessWidget {
                   ),
                 ),
                 Center(
-                  child: Text(
-                    "patient",
-                    style: GoogleFonts.getFont(
-                      "Roboto",
-                      textStyle: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
-                        color: AppColor.bgFillColor,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "patient",
+                        style: GoogleFonts.getFont(
+                          "Roboto",
+                          textStyle: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300,
+                            color: AppColor.bgFillColor,
+                          ),
+                        ),
                       ),
-                    ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 21,
+                        width: 21,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                              2,
+                            ),
+                            color: AppColor.bgFillColor),
+                        child: const Icon(
+                          Icons.call_outlined,
+                          size: 14,
+                          color: AppColor.whiteColor,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const VerticalSpeacing(20),
