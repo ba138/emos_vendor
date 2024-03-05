@@ -42,6 +42,7 @@ class PatientDetailWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(
                   child: Container(
@@ -83,6 +84,65 @@ class PatientDetailWidget extends StatelessWidget {
                     ),
                   ),
                 ),
+                const VerticalSpeacing(20),
+                Text(
+                  "services",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const VerticalSpeacing(12),
+                Row(
+                  children: [
+                    Container(
+                      height: 36,
+                      width: 90,
+                      decoration: BoxDecoration(
+                        color: AppColor.bgFillColor,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "2D Echo",
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColor.whiteColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 36,
+                      width: 90,
+                      decoration: BoxDecoration(
+                        color: AppColor.bgFillColor,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "2D Echo",
+                          style: GoogleFonts.getFont(
+                            "Roboto",
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColor.whiteColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
