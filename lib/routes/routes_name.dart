@@ -79,4 +79,5 @@ class RouteName {
   static const String homeCareEditScreen = ('/home_care_edit_screen');
   static const String patientDetailWidget = ('/Patient_Detail_Widget');
   static const String paymentHistory = ('/payment_history');
+  static const String paymentDetail = ('/payment_detail');
 }

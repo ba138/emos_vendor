@@ -1,4 +1,5 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
+import 'package:emos_vendor/View/widgets/payment_widget.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -107,6 +108,58 @@ class PaymentDetailView extends StatelessWidget {
                     ],
                   ),
                 ),
+                const VerticalSpeacing(40),
+                Text(
+                  "Payment Details",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                // const VerticalSpeacing(8),
+                const PaymentWidget(
+                  name: 'Bank Name',
+                  value: 'Allied Bank',
+                ),
+                const PaymentWidget(
+                  name: 'Sender Name',
+                  value: 'Basit Aly',
+                ),
+                const PaymentWidget(
+                  name: 'Account Number',
+                  value: '12345678',
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Total Payment",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "432\$",
+                      style: GoogleFonts.getFont(
+                        "Roboto",
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: AppColor.textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
