@@ -191,9 +191,13 @@ class _HospitalHomeState extends State<HospitalHome> {
                     ],
                   ),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                 ],
               ),
             ),
