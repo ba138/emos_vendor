@@ -46,6 +46,7 @@ import 'package:emos_vendor/View/Radiology/radiology_profile/radiology_profile.d
 import 'package:emos_vendor/View/home/home_screen.dart';
 import 'package:emos_vendor/View/Hospital/notifications/notifications.dart';
 import 'package:emos_vendor/View/Hospital/profile/profile.dart';
+import 'package:emos_vendor/View/payment_detail_view.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import '../View/Clinic/clinic_notifications/clinic_total_rating.dart';
@@ -292,10 +293,15 @@ class Routes {
         );
       case RouteName.patientDetailWidget:
         return MaterialPageRoute(
-          builder: (BuildContext context) => const PatientDetailWidget(),);
+          builder: (BuildContext context) => const PatientDetailWidget(),
+        );
       case RouteName.paymentHistory:
         return MaterialPageRoute(
           builder: (BuildContext context) => const PymentHistory(),
+        );
+      case RouteName.paymentDetail:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const PaymentDetailView(),
         );
 
       default:
