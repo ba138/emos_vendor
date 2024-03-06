@@ -12,9 +12,6 @@ class AmbulanceDetailScreen extends StatefulWidget {
 }
 
 class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
-  String selectedPrice = '200Pkr'; // Default value
-  String selectedType = "Private";
-  String ambulanceDetail = "Basic";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

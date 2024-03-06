@@ -99,10 +99,7 @@ class ProfileScreen extends StatelessWidget {
                       ProfileWidgetFeatures(
                         icon: Icons.meeting_room_outlined,
                         title: 'Hospital Detail',
-                        ontap: () {
-                          // Navigator.pushNamed(
-                          //     context, RouteName.selectAlergyview);
-                        },
+                        ontap: () {},
                         iconColor: AppColor.bgFillColor,
                       ),
                       const VerticalSpeacing(18.0),
