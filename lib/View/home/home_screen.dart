@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         height: 100.0,
-                        width: 115.0,
+                        width: 114.0,
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: AppColor.textFieldColor,
@@ -180,7 +180,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         height: 100.0,
-                        width: 115.0,
+                        width: 114.0,
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: AppColor.textFieldColor,
@@ -246,7 +246,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 100.0,
-                      width: 115.0,
+                      width: 114.0,
                       child: Container(
                         height: 60.0,
                         width: 108.0,
