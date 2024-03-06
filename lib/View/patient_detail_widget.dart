@@ -1,6 +1,5 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
-import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -204,20 +203,15 @@ class PatientDetailWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, RouteName.paymentDetail);
-                  },
-                  child: Container(
-                    height: 80,
-                    width: 102,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      image: const DecorationImage(
-                          image: NetworkImage(
-                              "https://compoundmed.com/images/img-banner.jpg"),
-                          fit: BoxFit.cover),
-                    ),
+                Container(
+                  height: 80,
+                  width: 102,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://compoundmed.com/images/img-banner.jpg"),
+                        fit: BoxFit.cover),
                   ),
                 )
               ],

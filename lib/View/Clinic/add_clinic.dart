@@ -8,8 +8,15 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../GlobalColors/colors.dart';
 import '../../components/coustem_text_field/coustem_text_field.dart';
 
-class AddClinic extends StatelessWidget {
+class AddClinic extends StatefulWidget {
   const AddClinic({super.key});
+
+  @override
+  State<AddClinic> createState() => _AddClinicState();
+}
+
+class _AddClinicState extends State<AddClinic> {
+  String selectedType = "Private";
 
   @override
   Widget build(BuildContext context) {
@@ -102,12 +109,32 @@ class AddClinic extends StatelessWidget {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter your clinic catagory...',
+                DropdownButton<String>(
+                  isExpanded: true,
+                  value: selectedType,
+                  icon: const Icon(Icons.expand_more_outlined),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: const TextStyle(
+                      color: AppColor
+                          .bgFillColor), // Replace with your desired color
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedType = newValue!;
+                    });
+                  },
+                  items: <String>[
+                    'Private',
+                    'Public',
+                    'Goverment',
+                    'Semi-Goverment'
+                  ] // Add more options as needed
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
                 const VerticalSpeacing(30.0),
                 Text(

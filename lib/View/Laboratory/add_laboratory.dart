@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
@@ -92,7 +93,7 @@ class AddLaboratory extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Laboratory Type",
+                  "List Of Test",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -102,13 +103,16 @@ class AddLaboratory extends StatelessWidget {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Public,Provate etc...',
-                ),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "1", name: 'Blood Test'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'Covid-19 Test'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "3", name: 'Hormonal Test'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "4", name: 'Bio Chemical Test'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "5", name: 'Urine test'),
                 const VerticalSpeacing(30.0),
                 Text(
                   "Phone No",
@@ -146,6 +150,25 @@ class AddLaboratory extends StatelessWidget {
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
                   hintText: '12:30Am to 9:30Pm ...',
+                ),
+                const VerticalSpeacing(30.0),
+                Text(
+                  "Test Charges",
+                  style: GoogleFonts.getFont(
+                    "Roboto",
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.textColor,
+                    ),
+                  ),
+                ),
+                const TextFieldCustom(
+                  // controller: emailController,
+                  enablePrefixIcon: false,
+                  maxLines: 1,
+                  icon: Icons.location_city_outlined,
+                  hintText: '120INR',
                 ),
                 const VerticalSpeacing(16.0),
                 Text(
