@@ -103,13 +103,13 @@ class _PymentHistoryState extends State<PymentHistory> {
                         const SizedBox(width: 40),
                         Container(
                           width: 80,
-                          height: 30,
+                          height: 40,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(4.0),
+                            padding: const EdgeInsets.all(6.0),
                             child: Center(
                               child: DropdownButton<String>(
                                 iconSize: 20,
