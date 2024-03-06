@@ -98,6 +98,13 @@ class DoctorAtHomeProfile extends StatelessWidget {
                           subtitle: '23 Karachi City, Ancholi,New Block'),
                       const VerticalSpeacing(46.0),
                       ProfileWidgetFeatures(
+                        ontap: () {},
+                        icon: Icons.payment_outlined,
+                        title: 'Payment History',
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
                         icon: Icons.emergency_outlined,
                         title: 'Doctor Detail',
                         ontap: () {

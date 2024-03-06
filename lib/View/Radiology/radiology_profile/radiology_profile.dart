@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/Hospital/profile/widgets/profile_widget_feature.dart';
 import 'package:emos_vendor/View/Radiology/radiology_profile/widgets/radiology_profile_widget_feature.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
@@ -96,6 +97,13 @@ class RadiologyProfileScreen extends StatelessWidget {
                           title: 'Address',
                           subtitle: '23 Karachi City, Ancholi,New Block'),
                       const VerticalSpeacing(46.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {},
+                        icon: Icons.payment_outlined,
+                        title: 'Payment History',
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
                       RadiologyProfileWidgetFeatures(
                         icon: Icons.personal_video_outlined,
                         title: 'Radiology Detail',

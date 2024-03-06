@@ -1,5 +1,6 @@
 import 'package:emos_vendor/View/Clinic/clinic_profile/widget/clinic_profileWidget.dart';
 import 'package:emos_vendor/View/Clinic/clinic_profile/widget/clinic_profile_features.dart';
+import 'package:emos_vendor/View/Hospital/profile/widgets/profile_widget_feature.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -96,6 +97,13 @@ class ClinicProfileScreen extends StatelessWidget {
                           title: 'Address',
                           subtitle: '23 Karachi City, Ancholi,New Block'),
                       const VerticalSpeacing(46.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {},
+                        icon: Icons.payment_outlined,
+                        title: 'Payment History',
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
                       ClinicProfileFeatureWidget(
                         icon: Icons.meeting_room_outlined,
                         title: 'Clinic Detail',
