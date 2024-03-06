@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../GlobalColors/colors.dart';
 import '../../../components/VerticalSpacing/vertical_spacing.dart';
+import '../../Hospital/profile/widgets/profile_widget_feature.dart';
 
 class LabotryProfileScreen extends StatelessWidget {
   const LabotryProfileScreen({super.key});
@@ -103,6 +104,16 @@ class LabotryProfileScreen extends StatelessWidget {
                           // Navigator.pushNamed(
                           //     context, RouteName.selectAlergyview);
                         },
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.paymentHistory);
+                        },
+                        icon: Icons.payment_outlined,
+                        title: 'Payment History',
                         iconColor: AppColor.bgFillColor,
                       ),
                       const VerticalSpeacing(18.0),

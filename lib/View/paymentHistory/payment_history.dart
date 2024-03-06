@@ -1,11 +1,8 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
-import 'package:emos_vendor/View/Hospital/notifications/widgets/notificationWidget.dart';
 import 'package:emos_vendor/View/paymentHistory/widgets/payment_history_notifications.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../Hospital/widgets/top_hospitals_widget.dart';
 
 class PymentHistory extends StatefulWidget {
   const PymentHistory({super.key});
@@ -15,9 +12,9 @@ class PymentHistory extends StatefulWidget {
 }
 
 class _PymentHistoryState extends State<PymentHistory> {
+  String? selectedMonth;
   @override
   Widget build(BuildContext context) {
-    String? selectedMonth;
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +72,6 @@ class _PymentHistoryState extends State<PymentHistory> {
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
                           children: [
@@ -104,49 +100,61 @@ class _PymentHistoryState extends State<PymentHistory> {
                             ),
                           ],
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 40),
                         Container(
-                          width: 62,
-                          height: 28,
+                          width: 80,
+                          height: 30,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(4),
                           ),
-                          child: DropdownButton<String>(
-                            underline:
-                                const SizedBox(), // Remove the default underline
-                            iconSize: 20,
-                            isExpanded: true,
-                            value:
-                                selectedMonth, // Assuming selectedMonth is a variable holding the selected month value
-                            onChanged: (String? newValue) {
-                              setState(() {
-                                selectedMonth =
-                                    newValue; // Update selected month when user changes
-                              });
-                            },
-                            items: <String>[
-                              'January',
-                              'February',
-                              'March',
-                              'April',
-                              'May',
-                              'June',
-                              'July',
-                              'August',
-                              'September',
-                              'October',
-                              'November',
-                              'December'
-                            ].map<DropdownMenuItem<String>>((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(
-                                  value,
-                                  style: const TextStyle(color: Colors.white),
-                                ),
-                              );
-                            }).toList(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Center(
+                              child: DropdownButton<String>(
+                                iconSize: 20,
+                                isExpanded: true,
+                                value: selectedMonth,
+                                elevation: 16,
+                                dropdownColor: AppColor.bgFillColor,
+
+                                iconEnabledColor: Colors.white,
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14), // Set text color to white
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    selectedMonth = newValue!;
+                                  });
+                                },
+                                items: <String>[
+                                  'January',
+                                  'February',
+                                  'March',
+                                  'April',
+                                  'May',
+                                  'June',
+                                  'July',
+                                  'August',
+                                  'September',
+                                  'October',
+                                  'November',
+                                  'December'
+                                ].map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(
+                                      value,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize:
+                                              14), // Set item text color to red
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
                           ),
                         )
                       ],
@@ -159,7 +167,7 @@ class _PymentHistoryState extends State<PymentHistory> {
           const VerticalSpeacing(70.0),
           SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height*0.6,
+            height: MediaQuery.of(context).size.height * 0.6,
             child: Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20.0),
               child: ListView(
@@ -170,16 +178,19 @@ class _PymentHistoryState extends State<PymentHistory> {
                       const Text(
                         'Received Payment',
                         style: TextStyle(
-                          color: AppColor.bgFillColor,
-                          fontSize: 16.0,
-                          textBaseline: TextBaseline.ideographic,
-                        ),
+                            color: AppColor.bgFillColor,
+                            fontSize: 16.0,
+                            textBaseline: TextBaseline.alphabetic,
+                            fontWeight: FontWeight.w600,
+                            decoration: TextDecoration.underline,
+                            decorationColor: AppColor.bgFillColor,
+                            decorationThickness: 2),
                       ),
                       const VerticalSpeacing(20.0),
                       PaymentHistoryNotifications(onpress: () {}),
-                         const VerticalSpeacing(10.0),
+                      const VerticalSpeacing(10.0),
                       PaymentHistoryNotifications(onpress: () {}),
-                         const VerticalSpeacing(10.0),
+                      const VerticalSpeacing(10.0),
                       PaymentHistoryNotifications(onpress: () {}),
                     ],
                   ),
