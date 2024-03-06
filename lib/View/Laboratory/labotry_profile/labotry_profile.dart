@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/Hospital/profile/widgets/profile_widget_feature.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_profile/widgets/labotry_profile_widget.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_profile/widgets/labotry_profile_widget_feature.dart';
 import 'package:emos_vendor/routes/routes_name.dart';
@@ -97,6 +98,13 @@ class LabotryProfileScreen extends StatelessWidget {
                           title: 'Address',
                           subtitle: '23 Karachi City, Ancholi,New Block'),
                       const VerticalSpeacing(46.0),
+                      ProfileWidgetFeatures(
+                        ontap: () {},
+                        icon: Icons.payment_outlined,
+                        title: 'Payment History',
+                        iconColor: AppColor.bgFillColor,
+                      ),
+                      const VerticalSpeacing(18.0),
                       LabotryProfileWidgetFeatures(
                         icon: Icons.biotech_outlined,
                         title: 'Labotry Detail',

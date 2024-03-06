@@ -80,4 +80,5 @@ class RouteName {
   static const String patientDetailWidget = ('/Patient_Detail_Widget');
   static const String paymentHistory = ('/payment_history');
   static const String paymentDetail = ('/payment_detail');
+  static const String hosptialDetailScreen = ('/hosptial_detail_view');
 }

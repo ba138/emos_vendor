@@ -4,14 +4,14 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AmbulanceDetailScreen extends StatefulWidget {
-  const AmbulanceDetailScreen({super.key});
+class HosptialDetailView extends StatefulWidget {
+  const HosptialDetailView({super.key});
 
   @override
-  State<AmbulanceDetailScreen> createState() => _AmbulanceDetailScreenState();
+  State<HosptialDetailView> createState() => _HosptialDetailViewState();
 }
 
-class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
+class _HosptialDetailViewState extends State<HosptialDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +50,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                     SizedBox(
                         width: MediaQuery.of(context).size.width / 2 - 180),
                     Text(
-                      "Ambulance details",
+                      "Hosptial details",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
@@ -66,7 +66,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                       onPressed: () {
                         Navigator.pushNamed(
                           context,
-                          RouteName.ambulanceDetailEditScreen,
+                          RouteName.addHospital,
                         );
                       },
                       icon: const Icon(
@@ -102,7 +102,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance Name",
+                  "Hosptial Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -113,7 +113,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                   ),
                 ),
                 Text(
-                  "K-Ambulance",
+                  "Al_Hayat Hosptial",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -125,7 +125,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance Location",
+                  "Hosptial Location",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -148,7 +148,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Ambulance Details",
+                  "Hosptial Details",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -169,7 +169,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Ambulance Type",
+                  "Hosptial Type",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -213,7 +213,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Ambulance timing",
+                  "Hosptial timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -236,7 +236,7 @@ class _AmbulanceDetailScreenState extends State<AmbulanceDetailScreen> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Per Kilometer Price",
+                  "Visiting Charge",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
