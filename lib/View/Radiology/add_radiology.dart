@@ -1,3 +1,4 @@
+import 'package:emos_vendor/View/DoctorAtHome/widget/form_buttons.dart';
 import 'package:emos_vendor/components/RoundedButton/rounded_button.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
 import 'package:emos_vendor/components/appBarField/appBar_field.dart';
@@ -92,7 +93,7 @@ class AddRadiology extends StatelessWidget {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Radiology Type",
+                  "List  Of Services",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -102,16 +103,17 @@ class AddRadiology extends StatelessWidget {
                     ),
                   ),
                 ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Public,Provate etc...',
-                ),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "1", name: 'X-Ray'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "2", name: 'CT-Scan'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "3", name: 'MRI'),
+                const VerticalSpeacing(12),
+                const FormButtons(number: "4", name: '2D-Echo'),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Phone No",
+                  "Ph No",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -126,45 +128,7 @@ class AddRadiology extends StatelessWidget {
                   enablePrefixIcon: false,
                   maxLines: 1,
                   icon: Icons.location_city_outlined,
-                  hintText: 'Enter your ph no...',
-                ),
-                const VerticalSpeacing(30.0),
-                Text(
-                  "Test timing",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: '12:30Am to 9:30Pm ...',
-                ),
-                const VerticalSpeacing(30.0),
-                Text(
-                  "Available Test",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.textColor,
-                    ),
-                  ),
-                ),
-                const TextFieldCustom(
-                  // controller: emailController,
-                  enablePrefixIcon: false,
-                  maxLines: 1,
-                  icon: Icons.location_city_outlined,
-                  hintText: 'Enter available tests ...',
+                  hintText: '1234567',
                 ),
                 const VerticalSpeacing(16.0),
                 Text(
