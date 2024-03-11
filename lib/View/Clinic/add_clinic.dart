@@ -16,7 +16,7 @@ class AddClinic extends StatefulWidget {
 }
 
 class _AddClinicState extends State<AddClinic> {
-  String selectedType = "Private";
+  String selectedType = "Single-Speciality";
 
   @override
   Widget build(BuildContext context) {
@@ -124,10 +124,9 @@ class _AddClinicState extends State<AddClinic> {
                     });
                   },
                   items: <String>[
-                    'Private',
-                    'Public',
-                    'Goverment',
-                    'Semi-Goverment'
+                    'Single-Speciality',
+                    'Multi-Speciality',
+                    'All-Speciality',
                   ] // Add more options as needed
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
