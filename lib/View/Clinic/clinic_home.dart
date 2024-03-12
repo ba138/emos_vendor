@@ -220,9 +220,13 @@ class _ClinicHomeState extends State<ClinicHome> {
                     ],
                   ),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                 ],
               ),
             ),
