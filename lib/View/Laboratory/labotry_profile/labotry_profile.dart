@@ -102,8 +102,8 @@ class LabotryProfileScreen extends StatelessWidget {
                         icon: Icons.biotech_outlined,
                         title: 'Labotry Detail',
                         ontap: () {
-                          // Navigator.pushNamed(
-                          //     context, RouteName.selectAlergyview);
+                          Navigator.pushNamed(
+                              context, RouteName.labotryDetailScreen);
                         },
                         iconColor: AppColor.bgFillColor,
                       ),
