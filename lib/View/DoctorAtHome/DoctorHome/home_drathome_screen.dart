@@ -185,13 +185,21 @@ class _HomeDrAtHomeState extends State<HomeDrAtHome> {
                   ),
                   const VerticalSpeacing(10.0),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(16.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -228,13 +236,21 @@ class _HomeDrAtHomeState extends State<HomeDrAtHome> {
                   ),
                   const VerticalSpeacing(10.0),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  PatientCartWidget(fun: () {}),
+                  PatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(16.0),
                 ],
               ),

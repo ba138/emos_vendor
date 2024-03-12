@@ -191,7 +191,7 @@ class _ClinicHomeState extends State<ClinicHome> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Your Doctors',
+                        'Patients',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
@@ -203,7 +203,9 @@ class _ClinicHomeState extends State<ClinicHome> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, RouteName.clinicHistory);
+                          Navigator.pushNamed(
+                              context, RouteName.patientHistory);
+                          // Navigator.pushNamed(context, RouteName.clinicHistory);
                         },
                         child: Text(
                           'View all',

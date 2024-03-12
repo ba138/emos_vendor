@@ -157,7 +157,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                   ),
                 ),
                 Text(
-                  "Endocrinology",
+                  "Endocrinology,Psychiatrist",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
