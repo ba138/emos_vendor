@@ -192,9 +192,13 @@ class _PymentHistoryState extends State<PymentHistory> {
                         Navigator.pushNamed(context, RouteName.paymentDetail);
                       }),
                       const VerticalSpeacing(10.0),
-                      PaymentHistoryNotifications(onpress: () {}),
+                      PaymentHistoryNotifications(onpress: () {
+                        Navigator.pushNamed(context, RouteName.paymentDetail);
+                      }),
                       const VerticalSpeacing(10.0),
-                      PaymentHistoryNotifications(onpress: () {}),
+                      PaymentHistoryNotifications(onpress: () {
+                        Navigator.pushNamed(context, RouteName.paymentDetail);
+                      }),
                     ],
                   ),
                 ],
