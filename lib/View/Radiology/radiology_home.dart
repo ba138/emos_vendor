@@ -191,9 +191,13 @@ class _RadiologyHomeState extends State<RadiologyHome> {
                     ],
                   ),
                   const VerticalSpeacing(10.0),
-                  RadiologyPatientCartWidget(fun: () {}),
+                  RadiologyPatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  RadiologyPatientCartWidget(fun: () {}),
+                  RadiologyPatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                 ],
               ),
             ),
