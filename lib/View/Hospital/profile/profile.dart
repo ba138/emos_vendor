@@ -107,7 +107,10 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       const VerticalSpeacing(18.0),
                       ProfileWidgetFeatures(
-                        ontap: () {},
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteName.paymentHistory);
+                        },
                         icon: Icons.payment_outlined,
                         title: 'Payment History',
                         iconColor: AppColor.bgFillColor,

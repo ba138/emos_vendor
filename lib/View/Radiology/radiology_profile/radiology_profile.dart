@@ -98,19 +98,12 @@ class RadiologyProfileScreen extends StatelessWidget {
                           title: 'Address',
                           subtitle: '23 Karachi City, Ancholi,New Block'),
                       const VerticalSpeacing(46.0),
-                      ProfileWidgetFeatures(
-                        ontap: () {},
-                        icon: Icons.payment_outlined,
-                        title: 'Payment History',
-                        iconColor: AppColor.bgFillColor,
-                      ),
-                      const VerticalSpeacing(18.0),
                       RadiologyProfileWidgetFeatures(
                         icon: Icons.personal_video_outlined,
                         title: 'Radiology Detail',
                         ontap: () {
-                          // Navigator.pushNamed(
-                          //     context, RouteName.selectAlergyview);
+                          Navigator.pushNamed(
+                              context, RouteName.radiologyDetailScree);
                         },
                         iconColor: AppColor.bgFillColor,
                       ),

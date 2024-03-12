@@ -1,6 +1,7 @@
 import 'package:emos_vendor/GlobalColors/colors.dart';
 import 'package:emos_vendor/View/paymentHistory/widgets/payment_history_notifications.dart';
 import 'package:emos_vendor/components/VerticalSpacing/vertical_spacing.dart';
+import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -187,11 +188,17 @@ class _PymentHistoryState extends State<PymentHistory> {
                             decorationThickness: 2),
                       ),
                       const VerticalSpeacing(20.0),
-                      PaymentHistoryNotifications(onpress: () {}),
+                      PaymentHistoryNotifications(onpress: () {
+                        Navigator.pushNamed(context, RouteName.paymentDetail);
+                      }),
                       const VerticalSpeacing(10.0),
-                      PaymentHistoryNotifications(onpress: () {}),
+                      PaymentHistoryNotifications(onpress: () {
+                        Navigator.pushNamed(context, RouteName.paymentDetail);
+                      }),
                       const VerticalSpeacing(10.0),
-                      PaymentHistoryNotifications(onpress: () {}),
+                      PaymentHistoryNotifications(onpress: () {
+                        Navigator.pushNamed(context, RouteName.paymentDetail);
+                      }),
                     ],
                   ),
                 ],

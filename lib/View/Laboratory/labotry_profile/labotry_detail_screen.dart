@@ -4,14 +4,14 @@ import 'package:emos_vendor/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DoctorAtHomeDetailView extends StatefulWidget {
-  const DoctorAtHomeDetailView({super.key});
+class LabotryDetailView extends StatefulWidget {
+  const LabotryDetailView({super.key});
 
   @override
-  State<DoctorAtHomeDetailView> createState() => _DoctorAtHomeDetailViewState();
+  State<LabotryDetailView> createState() => _HomeCareDetailViewState();
 }
 
-class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
+class _HomeCareDetailViewState extends State<LabotryDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,9 +48,9 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                       ),
                     ),
                     SizedBox(
-                        width: MediaQuery.of(context).size.width / 2 - 160),
+                        width: MediaQuery.of(context).size.width / 2 - 170),
                     Text(
-                      "Doctor details",
+                      "laboratory details",
                       style: GoogleFonts.getFont(
                         "Roboto",
                         textStyle: const TextStyle(
@@ -66,7 +66,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                       onPressed: () {
                         Navigator.pushNamed(
                           context,
-                          RouteName.doctorathomeDetaileditscreen,
+                          RouteName.addLaboratory,
                         );
                       },
                       icon: const Icon(
@@ -102,7 +102,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Doctor Name",
+                  "Laboratory Name",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -125,7 +125,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Doctor Location",
+                  "Laboratory Location",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -148,7 +148,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                 ),
                 const VerticalSpeacing(30.0),
                 const Text(
-                  "Doctor Specialist",
+                  "Avaliable Test",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -157,70 +157,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                   ),
                 ),
                 Text(
-                  "Endocrinology,Psychiatrist",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.textColor2,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(30.0),
-                const Text(
-                  "Doctor Language",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color:
-                        AppColor.textColor, // Replace with your desired color
-                  ),
-                ),
-                Text(
-                  "Hindi",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.textColor2,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(30.0),
-                const Text(
-                  "Doctor Experince",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color:
-                        AppColor.textColor, // Replace with your desired color
-                  ),
-                ),
-                Text(
-                  "6Years",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.textColor2,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(30.0),
-                const Text(
-                  "Doctor Degrees",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color:
-                        AppColor.textColor, // Replace with your desired color
-                  ),
-                ),
-                Text(
-                  "Doctor of Nursing Practice",
+                  "Blood-Test,Covid-19-Test,Urin-Test",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -255,7 +192,7 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                 ),
                 const VerticalSpeacing(30.0),
                 Text(
-                  "Doctor timing",
+                  "Laboratory timing",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(
@@ -288,27 +225,6 @@ class _DoctorAtHomeDetailViewState extends State<DoctorAtHomeDetailView> {
                 ),
                 Text(
                   "1000INR",
-                  style: GoogleFonts.getFont(
-                    "Roboto",
-                    textStyle: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: AppColor.textColor2,
-                    ),
-                  ),
-                ),
-                const VerticalSpeacing(30.0),
-                const Text(
-                  "Doctor Bio",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color:
-                          AppColor.textColor // Replace with your desired color
-                      ),
-                ),
-                Text(
-                  "hello there i am basit aly shah doctor Doctor of Nursing Practice having experince more then 5 years.",
                   style: GoogleFonts.getFont(
                     "Roboto",
                     textStyle: const TextStyle(

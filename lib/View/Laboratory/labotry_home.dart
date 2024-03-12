@@ -192,9 +192,13 @@ class _LabotryHomeState extends State<LabotryHome> {
                     ],
                   ),
                   const VerticalSpeacing(10.0),
-                  LabotryPatientCartWidget(fun: () {}),
+                  LabotryPatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                   const VerticalSpeacing(10.0),
-                  LabotryPatientCartWidget(fun: () {}),
+                  LabotryPatientCartWidget(fun: () {
+                    Navigator.pushNamed(context, RouteName.patientDetailWidget);
+                  }),
                 ],
               ),
             ),

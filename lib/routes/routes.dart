@@ -7,6 +7,7 @@ import 'package:emos_vendor/View/Clinic/clinicHistory/clinic_history.dart';
 import 'package:emos_vendor/View/Clinic/clinic_bottomNavigation/clinic_bottomnavigation.dart';
 import 'package:emos_vendor/View/Clinic/clinic_home.dart';
 import 'package:emos_vendor/View/Clinic/clinic_notifications/clinic_nofication.dart';
+import 'package:emos_vendor/View/Clinic/clinic_profile/clinic_detail_view.dart';
 import 'package:emos_vendor/View/Clinic/clinic_profile/clinic_profile.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorAtHomeDashboard/doctor_at_home_dashboard.dart';
 import 'package:emos_vendor/View/DoctorAtHome/DoctorProfile/doctor_at_home_detail_screen.dart';
@@ -28,6 +29,8 @@ import 'package:emos_vendor/View/Ambulance/add_ambulance.dart';
 import 'package:emos_vendor/View/Clinic/add_clinic.dart';
 import 'package:emos_vendor/View/DoctorAtHome/widget/add_doctor_at_home.dart';
 import 'package:emos_vendor/View/Hospital/profile/hosptial_detail_view.dart';
+import 'package:emos_vendor/View/Laboratory/labotry_profile/labotry_detail_screen.dart';
+import 'package:emos_vendor/View/Radiology/radiology_profile/radiology_detail_screen.dart';
 import 'package:emos_vendor/View/patient_detail_widget.dart';
 import 'package:emos_vendor/View/paymentHistory/payment_history.dart';
 import 'package:emos_vendor/View/Laboratory/add_laboratory.dart';
@@ -308,7 +311,18 @@ class Routes {
         return MaterialPageRoute(
           builder: (BuildContext context) => const HosptialDetailView(),
         );
-
+      case RouteName.clinicDetailScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const ClinicDetailView(),
+        );
+      case RouteName.labotryDetailScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const LabotryDetailView(),
+        );
+      case RouteName.radiologyDetailScree:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyDetailScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) {
