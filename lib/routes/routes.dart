@@ -30,6 +30,7 @@ import 'package:emos_vendor/View/Clinic/add_clinic.dart';
 import 'package:emos_vendor/View/DoctorAtHome/widget/add_doctor_at_home.dart';
 import 'package:emos_vendor/View/Hospital/profile/hosptial_detail_view.dart';
 import 'package:emos_vendor/View/Laboratory/labotry_profile/labotry_detail_screen.dart';
+import 'package:emos_vendor/View/Radiology/radiology_profile/radiology_detail_screen.dart';
 import 'package:emos_vendor/View/patient_detail_widget.dart';
 import 'package:emos_vendor/View/paymentHistory/payment_history.dart';
 import 'package:emos_vendor/View/Laboratory/add_laboratory.dart';
@@ -317,6 +318,10 @@ class Routes {
       case RouteName.labotryDetailScreen:
         return MaterialPageRoute(
           builder: (BuildContext context) => const LabotryDetailView(),
+        );
+      case RouteName.radiologyDetailScree:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const RadiologyDetailScreen(),
         );
       default:
         return MaterialPageRoute(
