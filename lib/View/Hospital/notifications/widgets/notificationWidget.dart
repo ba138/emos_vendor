@@ -28,7 +28,7 @@ class NotificationsWidget extends StatelessWidget {
             ),
             title: Text.rich(
               TextSpan(
-                text: 'Dr. Sutash Sing\n',
+                text: 'Basit aly\n',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -39,7 +39,7 @@ class NotificationsWidget extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: 'diagnosing and treating injuries',
+                    text: 'You have request for apointment',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
